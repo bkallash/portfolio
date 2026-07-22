@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Bayan Kallash</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav solid">
+    <a class="logo" href="index.html">Bayan <span>Kallash</span></a>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a class="nav-cta active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <header class="page-hero page-enter">
+    <p class="eyebrow reveal">Contact</p>
+    <h1 class="reveal scramble-target">Let’s build together</h1>
+    <p class="reveal d1">Tell me about your project, Laravel platform, or AI workflow needs. I’ll reply within one business day.</p>
+  </header>
+  <section class="section contact-grid" style="padding-top:0">
+    <div class="reveal">
+      <a class="big" href="mailto:bayan@kallash.dev">bayan@kallash.dev</a>
+      <a class="big" href="https://github.com/bayankallash" target="_blank" rel="noopener">GitHub</a>
+      <a class="big" href="https://linkedin.com/in/bayankallash" target="_blank" rel="noopener">LinkedIn</a>
+      <p class="lead">Remote-first · Flexible hours · Select engagements</p>
+    </div>
+    <form class="form reveal d1">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="message">Project Details</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn btn-primary magnetic" type="submit">Send Message</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+  <footer class="footer">
+    <p>© 2026 Bayan Kallash</p>
+    <div class="footer-links"><a href="about.html">About</a></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
