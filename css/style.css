@@ -16,7 +16,32 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+/* Custom High-End Scrollbar */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-hot) rgba(17, 17, 17, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.28);
+  border-radius: 999px;
+  border: 2.5px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-hot);
+}
 
 body {
   font-family: var(--font-body);
@@ -1023,6 +1048,10 @@ body.menu-open {
   background: rgba(255, 77, 0, 0.45);
 }
 
+.mobile-nav-footer {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .menu-toggle { display: flex; }
   
@@ -1256,7 +1285,7 @@ body.menu-open {
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.5);
   }
-}
+
   .about-split,
   .contact-grid,
   .skill-row {
@@ -1361,17 +1390,39 @@ body.menu-open {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -46%) scale(0.97);
-  width: min(92vw, 1000px);
-  max-height: 88vh;
+  width: min(95vw, 1200px);
+  max-height: min(90vh, 920px);
   background: var(--bg);
-  border: 1px solid var(--ink);
-  border-radius: 12px;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
   z-index: 9910;
   overflow-y: auto;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 35px 95px rgba(0, 0, 0, 0.52);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-hot) rgba(17, 17, 17, 0.05);
+}
+
+/* Slim Styled Scrollbar for Case Study Modal */
+.cs-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.cs-modal::-webkit-scrollbar-track {
+  background: rgba(17, 17, 17, 0.03);
+  border-radius: 0 14px 14px 0;
+}
+
+.cs-modal::-webkit-scrollbar-thumb {
+  background: var(--orange-hot);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.cs-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
 }
 
 .cs-modal.open {
@@ -1521,6 +1572,27 @@ body.menu-open {
   background: var(--ink);
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+.cs-link-share {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--line);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.cs-link-share:hover {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.cs-link-share.copied {
+  background: #10B981 !important;
+  color: #ffffff !important;
+  border-color: #10B981 !important;
 }
 
 .cs-meta-item strong {
@@ -1725,7 +1797,7 @@ body.menu-open {
 .cs-screenshot-img {
   width: 100%;
   height: auto;
-  max-height: 480px;
+  max-height: 560px;
   object-fit: cover;
   display: block;
 }
@@ -1735,7 +1807,7 @@ body.menu-open {
   position: relative;
   background: #0d0d0d;
   aspect-ratio: 16 / 9;
-  max-height: 480px;
+  max-height: 560px;
   display: flex;
   flex-direction: column;
   overflow: hidden;

@@ -436,6 +436,13 @@
               <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               GitHub Repo
             </a>` : ''}
+            <button class="cs-link-btn cs-link-share magnetic" id="csShareBtn" type="button">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <span>Share Link</span>
+            </button>
           </div>
         </div>
 
@@ -512,7 +519,28 @@
     });
 
     // Close button listener
-    modalEl.querySelector('.cs-modal-close')?.addEventListener('click', closeCaseStudy);
+    modalEl.querySelector('.cs-modal-close')?.addEventListener('click', () => closeCaseStudy(true));
+
+    // Share link button listener
+    const shareBtn = modalEl.querySelector('#csShareBtn');
+    shareBtn?.addEventListener('click', () => {
+      const shareUrl = `${window.location.origin}${window.location.pathname}#project-${data.id}`;
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        const span = shareBtn.querySelector('span');
+        if (span) {
+          const orig = span.textContent;
+          span.textContent = 'Copied!';
+          shareBtn.classList.add('copied');
+          setTimeout(() => {
+            span.textContent = orig;
+            shareBtn.classList.remove('copied');
+          }, 2000);
+        }
+      }).catch(() => {
+        // Fallback prompt if clipboard API blocked
+        prompt('Copy project URL:', window.location.href);
+      });
+    });
 
     // Video play/pause simulation logic
     const playBtn = modalEl.querySelector('#csPlayBtn');
@@ -551,30 +579,54 @@
     });
   }
 
-  function openCaseStudy(projectId) {
+  function openCaseStudy(projectId, updateUrl = true) {
     const data = PROJECTS_DATA[projectId];
     if (!data) return;
     renderCaseStudyModal(data);
     backdropEl.classList.add('open');
     modalEl.classList.add('open');
     document.body.style.overflow = 'hidden';
+
+    if (updateUrl && window.location.hash !== `#project-${projectId}`) {
+      history.pushState({ project: projectId }, '', `#project-${projectId}`);
+    }
   }
 
-  function closeCaseStudy() {
+  function closeCaseStudy(updateUrl = true) {
     backdropEl.classList.remove('open');
     modalEl.classList.remove('open');
     document.body.style.overflow = '';
     clearInterval(videoTimer);
     isVideoPlaying = false;
+
+    if (updateUrl && window.location.hash && (window.location.hash.startsWith('#project-') || PROJECTS_DATA[window.location.hash.replace('#', '')])) {
+      history.pushState({ project: null }, '', window.location.pathname + window.location.search);
+    }
   }
 
-  backdropEl.addEventListener('click', closeCaseStudy);
+  function checkUrlForProject() {
+    const rawHash = window.location.hash.replace('#', '');
+    const projectId = rawHash.startsWith('project-') ? rawHash.replace('project-', '') : rawHash;
+    if (projectId && PROJECTS_DATA[projectId]) {
+      openCaseStudy(projectId, false);
+    } else if (modalEl.classList.contains('open')) {
+      closeCaseStudy(false);
+    }
+  }
+
+  backdropEl.addEventListener('click', () => closeCaseStudy(true));
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalEl.classList.contains('open')) {
-      closeCaseStudy();
+      closeCaseStudy(true);
     }
   });
+
+  window.addEventListener('popstate', checkUrlForProject);
+  window.addEventListener('hashchange', checkUrlForProject);
+
+  // Check URL on initial load
+  checkUrlForProject();
 
   // Global click delegate for [data-case-study] triggers
   document.addEventListener('click', (e) => {
@@ -582,7 +634,7 @@
     if (trigger) {
       e.preventDefault();
       const id = trigger.dataset.caseStudy;
-      openCaseStudy(id);
+      openCaseStudy(id, true);
     }
   });
 })();
