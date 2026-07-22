@@ -3,6 +3,19 @@
   const links = document.querySelector('.nav-links');
   const toggle = document.querySelector('.menu-toggle');
 
+  if (links && !links.querySelector('.mobile-nav-footer')) {
+    const footer = document.createElement('div');
+    footer.className = 'mobile-nav-footer';
+    footer.innerHTML = `
+      <div class="mobile-nav-status">
+        <span class="status-pulse"></span>
+        <span>Available for AI &amp; Full-Stack Projects</span>
+      </div>
+      <div class="mobile-nav-meta">Bayan Kallash — High-Reliability Architecture</div>
+    `;
+    links.appendChild(footer);
+  }
+
   window.addEventListener('scroll', () => {
     nav?.classList.toggle('solid', window.scrollY > 40);
   }, { passive: true });
