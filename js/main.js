@@ -457,8 +457,8 @@
 
     modalEl.innerHTML = `
       <div class="cs-modal-header">
-        <div class="cs-modal-title">
-          ${data.title}
+        <div class="cs-modal-header-main">
+          <h2 class="cs-modal-title">${data.title}</h2>
           <span class="cs-status-badge">${data.status}</span>
         </div>
         <button class="cs-modal-close" aria-label="Close modal">✕</button>
