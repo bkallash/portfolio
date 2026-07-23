@@ -1744,9 +1744,12 @@ body.menu-open {
   background: var(--paper);
 }
 
-.tech-pill svg {
+.tech-pill svg,
+.tech-pill img,
+.tech-pill-icon {
   width: 16px;
   height: 16px;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
@@ -1794,11 +1797,54 @@ body.menu-open {
   display: block;
 }
 
-.cs-screenshot-img {
+.cs-submedia-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #111111;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cs-submedia-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cs-submedia-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 77, 0, 0.4);
+}
+
+.cs-submedia-btn.active {
+  color: #ffffff;
+  background: var(--orange-hot);
+  border-color: var(--orange-hot);
+}
+
+.cs-html5-video {
   width: 100%;
   height: auto;
   max-height: 560px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000000;
+  display: block;
+}
+
+.cs-screenshot-img {
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: contain;
+  object-position: top center;
+  background: #0a0a0a;
   display: block;
 }
 
@@ -1817,8 +1863,10 @@ body.menu-open {
   flex: 1;
   position: relative;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #0a0a0a;
 }
 
 .cs-video-screen::before {

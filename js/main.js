@@ -220,24 +220,66 @@
   // Project Case Study Data & Interactive Modal System
   // ==========================================================================
   const TECH_ICONS = {
-    'Laravel': `<svg viewBox="0 0 24 24" fill="#FF2D20"><path d="M12 2L2 7.5v9L12 22l10-5.5v-9L12 2zM12 4.3l7.5 4.1v7.2L12 19.7l-7.5-4.1V8.4L12 4.3z"/></svg>`,
-    'Livewire': `<svg viewBox="0 0 24 24" fill="#FB70A9"><path d="M12 2L2 7.5v9L12 22l10-5.5v-9L12 2z"/></svg>`,
-    'Inertia.js': `<svg viewBox="0 0 24 24" fill="#9553E9"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>`,
-    'Filament': `<svg viewBox="0 0 24 24" fill="#EAB308"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg>`,
-    'OpenAI API': `<svg viewBox="0 0 24 24" fill="#10A37F"><circle cx="12" cy="12" r="9"/></svg>`,
-    'OpenAI': `<svg viewBox="0 0 24 24" fill="#10A37F"><circle cx="12" cy="12" r="9"/></svg>`,
-    'Tailwind': `<svg viewBox="0 0 24 24" fill="#38BDF8"><path d="M12 6c-3.3 0-5.5 1.7-6.6 5 1.1-1.6 2.5-2.2 4.1-1.7 1 .3 1.7 1.1 2.5 1.9C13.3 12.5 14.8 14 18 14c3.3 0 5.5-1.7 6.6-5-1.1 1.6-2.5 2.2-4.1 1.7-1-.3-1.7-1.1-2.5-1.9C16.7 7.5 15.2 6 12 6z"/></svg>`,
-    'Vue': `<svg viewBox="0 0 24 24" fill="#4FC08D"><path d="M2 3h3.5L12 15 18.5 3H22L12 21 2 3zm4.5 0h3L12 8.5 14.5 3h3L12 13 6.5 3z"/></svg>`,
+    'Laravel': `<svg viewBox="0 0 24 24" fill="#FF2D20"><path d="M23.645 5.234a.784.784 0 0 0-.378-.384L12.44.134a.795.795 0 0 0-.69 0L.926 4.85a.783.783 0 0 0-.378.384.778.778 0 0 0 .01.761l10.825 17.5a.79.79 0 0 0 1.231 0l10.824-17.5a.778.778 0 0 0 .007-.761z"/></svg>`,
+    'Livewire': `<svg viewBox="0 0 24 24" fill="#FB70A9"><path d="M19.167 1.5H4.833A3.333 3.333 0 0 0 1.5 4.833v14.334A3.333 3.333 0 0 0 4.833 22.5h14.334A3.333 3.333 0 0 0 22.5 19.167V4.833A3.333 3.333 0 0 0 19.167 1.5zm-3.08 14.567h-2.188l1.325-4.143h2.188l-1.325 4.143zm-4.375 0H9.524l1.325-4.143h2.188l-1.325 4.143zm-4.375 0H5.15l1.325-4.143h2.187L7.337 16.067zm11.5-6.25H6.663l.646-2.017h12.175l-.647 2.017z"/></svg>`,
+    'Inertia.js': `<svg viewBox="0 0 24 24" fill="#9553E9"><path d="M2.5 12l6.5-6.5h4.5L7 12l6.5 6.5H9L2.5 12zm8 0l6.5-6.5h4.5L15 12l6.5 6.5H17L10.5 12z"/></svg>`,
+    'Filament': `<svg viewBox="0 0 24 24" fill="#FDAE4B"><path d="M4 3h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm0 7h10a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1zm0 7h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>`,
+    'OpenAI API': `<svg viewBox="0 0 24 24" fill="#10A37F"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0813 4.779-2.7582a.7938.7938 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.5045 4.5045 0 0 1-4.4952 4.4953zM3.6047 18.2979a4.4707 4.4707 0 0 1-.5357-3.0044l.142.0854 4.779 2.7582a.7938.7938 0 0 0 .7902 0l5.8341-3.3688v2.3324a.0805.0805 0 0 1-.0332.0617L9.74 19.9504a4.4997 4.4997 0 0 1-6.1353-1.6525zM2.3444 8.2714a4.4707 4.4707 0 0 1 2.3407-1.9682l-.0047.1659v5.5164a.7938.7938 0 0 0 .3975.6861l5.8341 3.3688-2.02 1.1686a.0758.0758 0 0 1-.0711.0047l-4.836-2.7915a4.4949 4.4949 0 0 1-1.6405-6.1508zM18.995 10.3787l-5.8341-3.3688 2.02-1.1686a.0758.0758 0 0 1 .0711-.0047l4.836 2.7915a4.4997 4.4997 0 0 1-.659 8.119l-.142-.0854-4.779-2.7582a.7938.7938 0 0 0-.7902 0zm1.7454-3.3562l-.142-.0854-4.779-2.7582a.7938.7938 0 0 0-.7902 0L9.1951 7.5477V5.2153a.0805.0805 0 0 1 .0332-.0617L14.06 2.362a4.4997 4.4997 0 0 1 6.6804 4.6605zm-11.4552 4.4755l2.7163-1.5677 2.7163 1.5677v3.1355l-2.7163 1.5677-2.7163-1.5677z"/></svg>`,
+    'OpenAI': `<svg viewBox="0 0 24 24" fill="#10A37F"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0813 4.779-2.7582a.7938.7938 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.5045 4.5045 0 0 1-4.4952 4.4953zM3.6047 18.2979a4.4707 4.4707 0 0 1-.5357-3.0044l.142.0854 4.779 2.7582a.7938.7938 0 0 0 .7902 0l5.8341-3.3688v2.3324a.0805.0805 0 0 1-.0332.0617L9.74 19.9504a4.4997 4.4997 0 0 1-6.1353-1.6525zM2.3444 8.2714a4.4707 4.4707 0 0 1 2.3407-1.9682l-.0047.1659v5.5164a.7938.7938 0 0 0 .3975.6861l5.8341 3.3688-2.02 1.1686a.0758.0758 0 0 1-.0711.0047l-4.836-2.7915a4.4949 4.4949 0 0 1-1.6405-6.1508zM18.995 10.3787l-5.8341-3.3688 2.02-1.1686a.0758.0758 0 0 1 .0711-.0047l4.836 2.7915a4.4997 4.4997 0 0 1-.659 8.119l-.142-.0854-4.779-2.7582a.7938.7938 0 0 0-.7902 0zm1.7454-3.3562l-.142-.0854-4.779-2.7582a.7938.7938 0 0 0-.7902 0L9.1951 7.5477V5.2153a.0805.0805 0 0 1 .0332-.0617L14.06 2.362a4.4997 4.4997 0 0 1 6.6804 4.6605zm-11.4552 4.4755l2.7163-1.5677 2.7163 1.5677v3.1355l-2.7163 1.5677-2.7163-1.5677z"/></svg>`,
+    'Tailwind': `<svg viewBox="0 0 24 24" fill="#38BDF8"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19.2 12.001 19.2c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>`,
+    'Vue': `<svg viewBox="0 0 24 24" fill="#4FC08D"><path d="M24 1.5h-4.5L12 14.5 4.5 1.5H0l12 21L24 1.5zM12 12.5L17.5 1.5h-3.2L12 5.5 9.7 1.5H6.5L12 12.5z"/></svg>`,
     'React': `<svg viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="2" fill="#61DAFB"/></svg>`,
-    'Postgres': `<svg viewBox="0 0 24 24" fill="#4169E1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>`,
-    'Redis': `<svg viewBox="0 0 24 24" fill="#DC382D"><path d="M22 12l-10 5-10-5 10-5 10 5zm-10 7.5l-8-4v3l8 4 8-4v-3l-8 4z"/></svg>`,
-    'Python': `<svg viewBox="0 0 24 24" fill="#3776AB"><path d="M11.9 2c-5.2 0-4.9 2.3-4.9 2.3v2.4h5v.7H5.2S2 7 2 12.3s2.8 5 2.8 5h1.7v-2.4s-.1-2.8 2.8-2.8h4.9s2.7 0 2.7-2.6V4.7S17.4 2 11.9 2zm-2.7 1.6c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9c0-.5.4-.9.9-.9zm2.9 18.4c5.2 0 4.9-2.3 4.9-2.3v-2.4h-5v-.7h6.8s3.2.4 3.2-4.9-2.8-5-2.8-5h-1.7v2.4s.1 2.8-2.8 2.8h-4.9s-2.7 0-2.7 2.6v4.6s-.5 2.7 5 2.7zm2.7-1.6c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9c0 .5-.4.9-.9.9z"/></svg>`,
+    'Postgres': `<svg viewBox="0 0 24 24" fill="#336791"><path d="M11.968 0C5.358 0 0 5.358 0 11.968c0 6.61 5.358 11.968 11.968 11.968 6.61 0 11.968-5.358 11.968-11.968C23.936 5.358 18.578 0 11.968 0zm6.071 16.745c-.244.606-.826 1.01-1.489 1.01h-2.128v2.128c0 .663-.404 1.245-1.01 1.489a1.6 1.6 0 0 1-.585.111c-.425 0-.85-.159-1.173-.482l-3.719-3.719H5.789c-.883 0-1.6-.717-1.6-1.6V7.889c0-.883.717-1.6 1.6-1.6h12.25c.883 0 1.6.717 1.6 1.6v8.856z"/></svg>`,
+    'Redis': `<svg viewBox="0 0 24 24" fill="#DC382D"><path d="M22.67 15.55l-10-5.77a1.34 1.34 0 0 0-1.34 0l-10 5.77a1.34 1.34 0 0 0 0 2.32l10 5.77c.41.24.93.24 1.34 0l10-5.77a1.34 1.34 0 0 0 0-2.32zM12 22.42L3.33 17.42 12 12.42l8.67 5-8.67 5zM22.67 8.22l-10-5.77a1.34 1.34 0 0 0-1.34 0l-10 5.77a1.34 1.34 0 0 0 0 2.32l10 5.77c.41.24.93.24 1.34 0l10-5.77a1.34 1.34 0 0 0 0-2.32zM12 15.09L3.33 10.09 12 5.09l8.67 5-8.67 5z"/></svg>`,
+    'Python': `<svg viewBox="0 0 24 24" fill="#3776AB"><path d="M11.87 0c-5.28 0-4.95 2.29-4.95 2.29v2.37h5v.71H4.82S1.65 4.82 1.65 10.2c0 5.37 2.76 5.17 2.76 5.17h1.65v-2.43s-.09-2.88 2.84-2.88h4.94s2.78.04 2.78-2.69V4.67S17.15 0 11.87 0zm-2.73 1.6c.55 0 .99.44.99.99 0 .55-.44.99-.99.99-.55 0-.99-.44-.99-.99 0-.55.44-.99.99-.99zm2.73 22.4c5.28 0 4.95-2.29 4.95-2.29v-2.37h-5v-.71h7.1s3.17.55 3.17-4.82c0-5.37-2.76-5.17-2.76-5.17h-1.65v2.43s.09 2.88-2.84 2.88h-4.94s-2.78-.04-2.78 2.69v4.7s-.53 4.67 4.75 4.67zm2.73-1.6c-.55 0-.99-.44-.99-.99 0-.55.44-.99.99-.99.55 0 .99.44.99.99 0 .55-.44.99-.99.99z"/></svg>`,
     'Cloudflare': `<svg viewBox="0 0 24 24" fill="#F38020"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>`,
-    'TypeScript': `<svg viewBox="0 0 24 24" fill="#3178C6"><rect width="20" height="20" x="2" y="2" rx="4"/><path fill="#fff" d="M11.5 16.5h-2v-7h-3V8h8v1.5h-3v7zm3.5 0v-1.5c.8.6 1.8.9 2.7.9.9 0 1.3-.3 1.3-.7 0-1.2-3.8-.5-3.8-3.2 0-1.4 1.2-2.3 3.1-2.3 1.1 0 2.1.3 2.9.8l-.6 1.4c-.7-.4-1.5-.7-2.3-.7-.8 0-1.3.3-1.3.7 0 1.2 3.8.5 3.8 3.2 0 1.5-1.2 2.4-3.3 2.4-1.2 0-2.4-.4-3.2-1z"/></svg>`,
-    'Pgvector': `<svg viewBox="0 0 24 24" fill="#4169E1"><circle cx="12" cy="12" r="8" fill="#4169E1"/></svg>`
+    'TypeScript': `<svg viewBox="0 0 24 24" fill="#3178C6"><path d="M1.125 0C.507 0 0 .507 0 1.125v21.75C0 23.493.507 24 1.125 24h21.75c.618 0 1.125-.507 1.125-1.125V1.125C24 .507 23.493 0 22.875 0H1.125zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-1.088-.408 6.21 6.21 0 0 0-1.387-.149c-.693 0-1.212.131-1.556.395-.344.263-.516.637-.516 1.12 0 .341.1.618.3.83.201.213.484.385.85.517.365.132.812.254 1.341.367.752.164 1.387.354 1.905.57.518.217.922.502 1.212.857.29.354.435.808.435 1.36 0 .762-.303 1.378-.908 1.848-.605.47-1.463.705-2.574.705a9.876 9.876 0 0 1-1.898-.182 8.7 8.7 0 0 1-1.639-.516v-2.57a6.227 6.227 0 0 0 1.543.593 6.942 6.942 0 0 0 1.815.234c.734 0 1.282-.132 1.644-.396.363-.264.544-.643.544-1.137 0-.361-.097-.647-.291-.857-.195-.21-.476-.381-.844-.513-.368-.132-.824-.256-1.368-.373-.752-.164-1.383-.357-1.893-.578a3.29 3.29 0 0 1-1.205-.863c-.29-.356-.435-.806-.435-1.35 0-.74.298-1.346.894-1.818.596-.472 1.433-.708 2.511-.708zm-9.066.177v2.247h-2.91v9.646H3.633v-9.646H.723V9.927h8.699z"/></svg>`,
+    'Pgvector': `<svg viewBox="0 0 24 24" fill="#4169E1"><circle cx="12" cy="12" r="8" fill="#4169E1"/></svg>`,
+    'Alpine.js': `<svg viewBox="0 0 24 24" fill="#8BC0D0"><path d="m24 12-5.72 5.719H6.857L12.576 12 6.857 6.281H18.28L24 12zM11.424 12 5.705 6.281H0l5.719 5.719L0 17.719h5.705l5.719-5.719z"/></svg>`,
+    'MySQL': `<svg viewBox="0 0 24 24" fill="#00758F"><path d="M21.73 13.1c-.08-.18-.26-.3-.46-.3-.04 0-.08 0-.12.02l-2.04.75c-.32-.48-.75-.9-1.25-1.23l.97-1.95c.08-.16.06-.36-.06-.5-.12-.14-.32-.2-.5-.14l-2.1.7c-.55-.42-1.2-.72-1.9-.88V7.32c0-.22-.15-.42-.37-.47l-2.14-.53a.502.502 0 0 0-.61.42l-.24 2.13c-.66.12-1.28.38-1.84.75l-1.66-1.34a.502.502 0 0 0-.68.06l-1.5 1.5a.5.5 0 0 0 .06.75l1.34 1.66c-.37.56-.63 1.18-.75 1.84l-2.13.24a.5.5 0 0 0-.42.61l.53 2.14c.05.22.25.37.47.37H6.7c.16.7.46 1.35.88 1.9l-.7 2.1c-.06.18 0 .38.14.5.14.12.34.14.5.06l1.95-.97c.33.5.75.93 1.23 1.25l-.75 2.04c-.02.04-.02.08-.02.12 0 .2.12.38.3.46.06.03.13.04.2.04.14 0 .28-.06.37-.17l1.38-1.65c.67.23 1.38.35 2.1.35s1.43-.12 2.1-.35l1.38 1.65c.09.11.23.17.37.17.07 0 .14-.01.2-.04.18-.08.3-.26.3-.46 0-.04 0-.08-.02-.12l-.75-2.04c.48-.32.9-.75 1.23-1.25l1.95.97c.16.08.36.06.5-.06.14-.12.2-.32.14-.5l-.7-2.1c.42-.55.72-1.2.88-1.9h2.17c.22 0 .42-.15.47-.37l.53-2.14c.06-.24-.09-.49-.33-.55z"/></svg>`,
+    'Gemini AI': `<svg viewBox="0 0 24 24" fill="#8E75FF"><path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"/></svg>`,
+    'Gemini': `<svg viewBox="0 0 24 24" fill="#8E75FF"><path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"/></svg>`
   };
 
   const PROJECTS_DATA = {
+    'form-generator': {
+      id: 'form-generator',
+      title: 'Form Generator',
+      year: '2026',
+      client: 'SaaS Form Builder Ecosystem',
+      role: 'Lead Full-Stack Architect',
+      duration: '3 Months',
+      tagline: 'Laravel 12 & Livewire 3 dynamic form builder with Google Gemini AI conversational builder, sentiment analysis & anomaly detection.',
+      status: 'Open-Source Production',
+      demoUrl: 'https://formgenerator.me',
+      githubUrl: 'https://github.com/bkallash/form-generator',
+      metrics: [
+        { val: '100%', lbl: 'Offline Sync' },
+        { val: 'Gemini 2.5', lbl: 'Flash AI Engine' },
+        { val: '<50ms', lbl: 'Livewire Response' }
+      ],
+      description: 'Form Generator is a modern, high-performance Laravel 12 + Livewire 3 application for building custom dynamic forms, sharing public links, collecting responses, and running advanced AI-driven analysis. Built on the TALL stack (Tailwind CSS, Alpine.js, Livewire 3, Flux UI) and MySQL, it leverages Google Gemini AI (gemini-2.5-flash) for chat-based form creation, background sentiment & emotion analysis, and automated traffic anomaly detection.',
+      features: [
+        { title: 'Conversational Gemini AI Builder', desc: 'Create, modify, and expand multi-step form schemas iteratively using natural language in the sidebar AI chat.' },
+        { title: 'AI Sentiment & Sub-Tone Analysis', desc: 'Asynchronously evaluates open-ended responses to score sentiment (0.0–1.0) and detect sub-tones (frustrated, excited, satisfied).' },
+        { title: 'Automated Anomaly & Traffic Alert Engine', desc: 'Monitors submission streams to flag 70%+ traffic drops, 150%+ spikes, negative review clusters, and quiet forms.' },
+        { title: 'Visual Drag-and-Drop & Multi-Step Logic', desc: 'Arrange 15+ field types with conditional visibility rules, multi-page step layouts, and live previews.' },
+        { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
+      ],
+      techStack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind', 'MySQL', 'Gemini AI', 'JS PWA', 'Redis'],
+      screenshot: 'img/form-generator/form_builder.webp',
+      screenshots: [
+        { id: 'builder', label: 'Form Builder', src: 'img/form-generator/form_builder.webp' },
+        { id: 'dashboard', label: 'Analytics Dashboard', src: 'img/form-generator/dashboard.webp' },
+        { id: 'public', label: 'Public Form View', src: 'img/form-generator/public_form.webp' },
+        { id: 'submission', label: 'Submissions Data', src: 'img/form-generator/submission.webp' }
+      ],
+      videos: [
+        { id: 'analytics_video', label: 'Analytics Walkthrough', src: 'img/form-generator/analytics.webm', log: 'GEMINI AI ENGINE: Executed sentiment & anomaly sweep across form submissions' },
+        { id: 'sync_video', label: 'Offline PWA Sync Demo', src: 'img/form-generator/offline-sync-submissions.webm', log: 'PWA SERVICE WORKER: Reconnected — Synced 18 queued offline submissions (0 loss)' }
+      ],
+      videoLog: 'GEMINI AI CHAT: Interactive sidebar form schema builder active'
+    },
     'ledgerline': {
       id: 'ledgerline',
       title: 'Ledgerline',
@@ -341,32 +383,6 @@
       techStack: ['Laravel', 'Filament', 'Tailwind', 'Cloudflare'],
       screenshot: 'img/harbor.png',
       videoLog: 'DEPLOYMENT COMPLETE: Invalidated cache across 275 edge POPs in 87ms'
-    },
-    'pulse': {
-      id: 'pulse',
-      title: 'Pulse AI Copilot',
-      year: '2023',
-      client: 'Pulse Analytics',
-      role: 'Full-Stack & AI Engineer',
-      duration: '4 Months',
-      tagline: 'Natural language analytics copilot & custom RAG pipeline.',
-      status: 'SaaS Deployed',
-      demoUrl: 'https://pulsemetrics.io',
-      githubUrl: 'https://github.com/bayankallash/pulse-ai-copilot',
-      metrics: [
-        { val: '<20ms', lbl: 'Vector Search Latency' },
-        { val: '500M+', lbl: 'Events Indexed' },
-        { val: '60fps', lbl: 'UI Dashboard' }
-      ],
-      description: 'Pulse AI Copilot allows product teams to query massive dataset funnels using plain natural language questions. Powered by Laravel API gateways, Pgvector vector embeddings, and OpenAI function calling.',
-      features: [
-        { title: 'Natural Language SQL Generation', desc: 'Converts user questions into optimized analytical queries.' },
-        { title: 'Pgvector RAG Pipeline', desc: 'High-speed vector similarity search over schema documentation.' },
-        { title: 'Zero-Latency Analytics SDK', desc: 'Lightweight client SDK connected to real-time dashboards.' }
-      ],
-      techStack: ['Laravel', 'OpenAI', 'Pgvector', 'Python'],
-      screenshot: 'img/pulse.png',
-      videoLog: 'QUERY ENGINE: Aggregated 48,291,000 raw log rows in 14.2ms'
     }
   };
 
@@ -389,7 +405,35 @@
     document.body.appendChild(modalEl);
   }
 
+  const TECH_ICON_SLUGS = {
+    'Laravel': 'laravel/FF2D20',
+    'Livewire': 'livewire/FB70A9',
+    'Alpine.js': 'alpinedotjs/8BC0D0',
+    'Tailwind': 'tailwindcss/06B6D4',
+    'MySQL': 'mysql/4479A1',
+    'Gemini AI': 'googlegemini/8E75FF',
+    'Gemini': 'googlegemini/8E75FF',
+    'Inertia.js': 'inertia/9553E9',
+    'Filament': 'filament/FDAE4B',
+    'OpenAI API': 'openai/412991',
+    'OpenAI': 'openai/412991',
+    'Vue': 'vuedotjs/4FC08D',
+    'React': 'react/61DAFB',
+    'Postgres': 'postgresql/4169E1',
+    'Redis': 'redis/FF4438',
+    'Python': 'python/3776AB',
+    'Cloudflare': 'cloudflare/F38020',
+    'TypeScript': 'typescript/3178C6',
+    'Pgvector': 'postgresql/4169E1',
+    'JS PWA': 'pwa/5A0FC8',
+    'PWA': 'pwa/5A0FC8'
+  };
+
   function getTechPillHtml(techName) {
+    const slug = TECH_ICON_SLUGS[techName];
+    if (slug) {
+      return `<span class="tech-pill"><img src="https://cdn.simpleicons.org/${slug}" width="16" height="16" alt="${techName}" class="tech-pill-icon" /> <span>${techName}</span></span>`;
+    }
     const iconSvg = TECH_ICONS[techName] || `<svg viewBox="0 0 24 24" fill="var(--orange)"><circle cx="12" cy="12" r="6"/></svg>`;
     return `<span class="tech-pill">${iconSvg} <span>${techName}</span></span>`;
   }
@@ -479,33 +523,82 @@
               </button>
               <button class="cs-media-tab" data-tab="video">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Interactive Video Demo
+                ${data.videos && data.videos.length > 0 ? `Video Demos (${data.videos.length})` : 'Interactive Video Demo'}
               </button>
             </div>
             <div class="cs-media-view active" id="tab-screenshot">
-              <img class="cs-screenshot-img" src="${data.screenshot}" alt="${data.title} UI Dashboard" />
+              ${data.screenshots && data.screenshots.length > 0 ? `
+                <div class="cs-submedia-tabs">
+                  ${data.screenshots.map((s, idx) => `
+                    <button class="cs-submedia-btn ${idx === 0 ? 'active' : ''}" data-shot-src="${s.src}">${s.label}</button>
+                  `).join('')}
+                </div>
+              ` : ''}
+              <img class="cs-screenshot-img" id="csMainScreenshot" src="${data.screenshot}" alt="${data.title} UI Showcase" />
             </div>
             <div class="cs-media-view" id="tab-video">
-              <div class="cs-video-player">
-                <div class="cs-video-screen" style="background-image: url('${data.screenshot}');">
-                  <div class="cs-video-overlay-log">
+              ${data.videos && data.videos.length > 0 ? `
+                <div class="cs-submedia-tabs">
+                  ${data.videos.map((v, idx) => `
+                    <button class="cs-submedia-btn ${idx === 0 ? 'active' : ''}" data-video-src="${v.src}" data-video-log="${v.log}">${v.label}</button>
+                  `).join('')}
+                </div>
+                <div class="cs-video-player" style="aspect-ratio: auto; height: auto;">
+                  <video class="cs-html5-video" id="csHtml5Video" src="${data.videos[0].src}" controls autoplay loop muted playsinline></video>
+                  <div class="cs-video-overlay-log" style="position:relative; bottom:0; left:0; right:0; margin: 0.5rem 0.75rem 0.75rem 0.75rem;">
                     <span class="cs-video-status-dot"></span>
-                    <span class="cs-video-log-text">${data.videoLog}</span>
+                    <span class="cs-video-log-text" id="csVideoLogText">${data.videos[0].log}</span>
                   </div>
                 </div>
-                <div class="cs-video-controls">
-                  <button class="cs-video-play-btn" id="csPlayBtn">▶</button>
-                  <div class="cs-video-progress-bar" id="csProgressBar">
-                    <div class="cs-video-progress-fill" id="csProgressFill"></div>
+              ` : `
+                <div class="cs-video-player">
+                  <div class="cs-video-screen" style="background-image: url('${data.screenshot}');">
+                    <div class="cs-video-overlay-log">
+                      <span class="cs-video-status-dot"></span>
+                      <span class="cs-video-log-text">${data.videoLog}</span>
+                    </div>
                   </div>
-                  <span class="cs-video-time" id="csTimeText">00:00 / 00:30</span>
+                  <div class="cs-video-controls">
+                    <button class="cs-video-play-btn" id="csPlayBtn">▶</button>
+                    <div class="cs-video-progress-bar" id="csProgressBar">
+                      <div class="cs-video-progress-fill" id="csProgressFill"></div>
+                    </div>
+                    <span class="cs-video-time" id="csTimeText">00:00 / 00:30</span>
+                  </div>
                 </div>
-              </div>
+              `}
             </div>
           </div>
         </div>
       </div>
     `;
+
+    // Sub-screenshot button switching listener
+    modalEl.querySelectorAll('[data-shot-src]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalEl.querySelectorAll('[data-shot-src]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const mainImg = modalEl.querySelector('#csMainScreenshot');
+        if (mainImg) mainImg.src = btn.dataset.shotSrc;
+      });
+    });
+
+    // Sub-video button switching listener
+    modalEl.querySelectorAll('[data-video-src]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalEl.querySelectorAll('[data-video-src]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const html5Vid = modalEl.querySelector('#csHtml5Video');
+        const logText = modalEl.querySelector('#csVideoLogText');
+        if (html5Vid) {
+          html5Vid.src = btn.dataset.videoSrc;
+          html5Vid.play().catch(() => { });
+        }
+        if (logText && btn.dataset.videoLog) {
+          logText.textContent = btn.dataset.videoLog;
+        }
+      });
+    });
 
     // Tab switching logic
     modalEl.querySelectorAll('.cs-media-tab').forEach(tab => {
@@ -542,7 +635,7 @@
       });
     });
 
-    // Video play/pause simulation logic
+    // Video play/pause simulation logic (fallback for projects without native HTML5 video)
     const playBtn = modalEl.querySelector('#csPlayBtn');
     const fillEl = modalEl.querySelector('#csProgressFill');
     const timeText = modalEl.querySelector('#csTimeText');
