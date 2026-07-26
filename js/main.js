@@ -117,18 +117,20 @@
     });
   }
 
-  // Magnetic buttons
-  document.querySelectorAll('.magnetic').forEach((btn) => {
-    btn.addEventListener('mousemove', (e) => {
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width / 2;
-      const y = e.clientY - r.top - r.height / 2;
-      btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+  // Magnetic buttons - fine pointer only (mouse)
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.magnetic').forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = '';
+      });
     });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = '';
-    });
-  });
+  }
 
   // Polished Custom Cursor System
   if (window.matchMedia('(pointer: fine)').matches) {
@@ -266,7 +268,7 @@
         { title: 'Visual Drag-and-Drop & Multi-Step Logic', desc: 'Arrange 15+ field types with conditional visibility rules, multi-page step layouts, and live previews.' },
         { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
       ],
-      techStack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind', 'MySQL', 'Gemini AI', 'JS PWA', 'Redis'],
+      techStack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind', 'MySQL', 'Gemini AI', 'Vite', 'JS PWA', 'Redis'],
       screenshot: 'img/form-generator/form_builder.webp',
       screenshots: [
         { id: 'builder', label: 'Form Builder', src: 'img/form-generator/form_builder.webp' },
@@ -280,109 +282,40 @@
       ],
       videoLog: 'GEMINI AI CHAT: Interactive sidebar form schema builder active'
     },
-    'ledgerline': {
-      id: 'ledgerline',
-      title: 'Ledgerline',
-      year: '2025',
-      client: 'Ledgerline Inc.',
-      role: 'Lead Laravel & Full-Stack Engineer',
-      duration: '4 Months',
-      tagline: 'High-throughput financial reconciliation engine on Laravel 11 & Horizon.',
-      status: 'Production Deployed',
-      demoUrl: 'https://ledgerline.dev',
-      githubUrl: 'https://github.com/bayankallash/ledgerline-ops',
+    'the-margin': {
+      id: 'the-margin',
+      title: 'The Margin',
+      year: '2026',
+      client: 'Open Publishing Salon & Editorial Platform',
+      role: 'Lead Full-Stack & AI Architect',
+      duration: '2 Months',
+      tagline: 'Laravel 13, Livewire 3 & Tailwind CSS v4 open essay salon with Google Gemini AI vector embeddings, hybrid semantic search, and account moderation workflows.',
+      status: 'Open-Source Production',
+      demoUrl: 'https://github.com/bkallash/the-margin',
+      githubUrl: 'https://github.com/bkallash/the-margin',
       metrics: [
-        { val: '-92%', lbl: 'Reconciliation Latency' },
-        { val: '1.2M+', lbl: 'Daily Queue Jobs' },
-        { val: '99.99%', lbl: 'Audit Accuracy' }
+        { val: 'Laravel 13', lbl: 'Modern Framework' },
+        { val: 'Gemini AI', lbl: 'Vector Embeddings' },
+        { val: 'Vector Search', lbl: 'AI Semantic Index' }
       ],
-      description: 'Ledgerline replaced a legacy batch reconciliation system with a real-time event-driven Laravel application. Powered by Laravel Horizon queues, Redis, PostgreSQL pessimistic locking, and Inertia.js, it processes over 14,000 multi-currency transactions per second.',
+      description: 'The Margin is a modern, full-featured editorial essay salon and knowledge publishing platform engineered with Laravel 13, Livewire 3, MySQL, and Tailwind CSS v4. Designed as a distraction-free digital space for deep thoughts and long-form writing, it features AI-powered vector embeddings via Google Gemini AI & laravel/ai, hybrid semantic search, real-time Echo broadcasting, a social author graph, rich manuscript authoring with Intervention Image, and complete administrative moderation and account review workflows.',
       features: [
-        { title: 'Laravel Horizon Queue System', desc: 'Distributed job processing across 12 queue workers with sub-second matching.' },
-        { title: 'Inertia.js + Vue 3 Frontend', desc: 'Seamless single-page application experience with zero API duplication.' },
-        { title: 'Cryptographic Audit Log', desc: 'Immutable ledger records for compliance and financial ops teams.' }
+        { title: 'Google Gemini AI Vector & Hybrid Search Engine', desc: 'Integrates laravel/ai (EmbeddingService) with Google Gemini Embeddings to generate vector embeddings upon publishing, pairing semantic AI search with instant keyword autocomplete (/api/search/suggest).' },
+        { title: 'Editorial Manuscript Authoring & WYSIWYG Salon', desc: 'Features a full manuscript editor with inline formatting, image processing via Intervention Image v3, custom tag taxonomies, article bookmarking, and nested discussion threads.' },
+        { title: 'Social Author Graph & Curated Salon Feeds', desc: 'Custom author landing pages showcasing published essays, statistics, pinned pieces, and an interactive follow/unfollow graph to personalize home content feeds.' },
+        { title: 'Moderation, Report Queues & Appeals Workflow', desc: 'Built-in administrative inspection tools to review user flags, suspend violating manuscripts, and manage structured account reinstatement appeals (/suspended/review).' },
+        { title: 'Real-Time WebSockets & Notification Center', desc: 'Live event broadcasting via Laravel Echo and Pusher, coupled with an interactive in-app notification desk for likes, saves, new followers, and platform announcements.' }
       ],
-      techStack: ['Laravel', 'Inertia.js', 'Vue', 'Postgres', 'Redis'],
-      screenshot: 'img/ledgerline.png',
-      videoLog: 'LARAVEL HORIZON QUEUE: 14,280 txn/sec [ACTIVE STREAM - 0 ANOMALIES]'
-    },
-    'orbit': {
-      id: 'orbit',
-      title: 'Orbit AI Studio',
-      year: '2024',
-      client: 'Orbit Automation Group',
-      role: 'Lead AI & Full-Stack Engineer',
-      duration: '6 Months',
-      tagline: 'Intelligent document processor & LLM agent orchestration platform.',
-      status: 'Active SaaS Engine',
-      demoUrl: 'https://orbitstudio.ai',
-      githubUrl: 'https://github.com/bayankallash/orbit-ai-studio',
-      metrics: [
-        { val: '45k+', lbl: 'Docs Processed Daily' },
-        { val: '<150ms', lbl: 'AI Agent Response' },
-        { val: '99.4%', lbl: 'Extraction Precision' }
+      techStack: ['Laravel', 'Livewire', 'Tailwind', 'MySQL', 'Gemini Embeddings', 'Vector Search', 'laravel/ai', 'Vite', 'Pusher'],
+      screenshot: 'img/the-margin/hero.webp',
+      screenshots: [
+        { id: 'hero', label: 'Salon Homepage', src: 'img/the-margin/hero.webp' },
+        { id: 'feed', label: 'Popular Reading & Topics', src: 'img/the-margin/feed.webp' },
+        { id: 'reader', label: 'Essay Reader View', src: 'img/the-margin/reader.webp' },
+        { id: 'editor', label: 'Manuscript Editor', src: 'img/the-margin/editor.webp' },
+        { id: 'moderation', label: 'Moderation & Appeals', src: 'img/the-margin/moderation.webp' }
       ],
-      description: 'Orbit AI Studio provides automated document ingestion, structured data extraction, and AI agent workflow execution. Built with Laravel 11 API backends, Python AI worker nodes, OpenAI API function calling, and Vue.js.',
-      features: [
-        { title: 'LLM Agent Pipelines', desc: 'Autonomous multi-step document processing agents with fallback logic.' },
-        { title: 'Structured Data Extraction', desc: 'Converts unstructured PDFs and images into typed JSON objects via OpenAI.' },
-        { title: 'Real-Time Workflow Console', desc: 'Live monitoring dashboard built with Tailwind & Vue.js.' }
-      ],
-      techStack: ['OpenAI API', 'Laravel', 'Vue', 'Python', 'Tailwind'],
-      screenshot: 'img/orbit.png',
-      videoLog: 'AI AGENT PIPELINE: Executed 1,420 invoice extractions [0 Errors]'
-    },
-    'northwind': {
-      id: 'northwind',
-      title: 'Northwind Ops',
-      year: '2024',
-      client: 'Northwind Freight Corp.',
-      role: 'Principal Full-Stack Architect',
-      duration: '5 Months',
-      tagline: 'Real-time fleet route optimization and operator control console.',
-      status: 'Live Dispatch Console',
-      demoUrl: 'https://northwind.logistics',
-      githubUrl: 'https://github.com/bayankallash/northwind-route-engine',
-      metrics: [
-        { val: '-18%', lbl: 'Idle Route Miles' },
-        { val: '4.2k', lbl: 'Active Fleet Vehicles' },
-        { val: '<50ms', lbl: 'Route Calculation' }
-      ],
-      description: 'Northwind Ops is a real-time reactive fleet dispatch dashboard built using Laravel, Livewire 3, Alpine.js, and Redis. Dispatchers dynamically re-route freight vehicles based on live traffic, weather, and delivery windows.',
-      features: [
-        { title: 'Livewire 3 Dynamic UI', desc: 'Reactive server-driven interfaces without full page reloads.' },
-        { title: 'Fleet Diagnostic Telemetry', desc: 'Real-time telemetry streams and automated route alerts.' },
-        { title: 'Operator Control Panel', desc: 'Tailwind CSS styled high-density dispatch workspace.' }
-      ],
-      techStack: ['Livewire', 'Laravel', 'Tailwind', 'Redis'],
-      screenshot: 'img/northwind.png',
-      videoLog: 'ROUTE OPTIMIZER: Re-routed 14 trucks around highway bottleneck (-42 min saved)'
-    },
-    'harbor': {
-      id: 'harbor',
-      title: 'Harbor CMS',
-      year: '2023',
-      client: 'Harbor Media Network',
-      role: 'Lead Laravel & Filament Developer',
-      duration: '3 Months',
-      tagline: 'Filament 3 powered content management platform with edge caching.',
-      status: 'Edge Production',
-      demoUrl: 'https://harborcms.edge',
-      githubUrl: 'https://github.com/bayankallash/harbor-filament-cms',
-      metrics: [
-        { val: '12ms', lbl: 'Edge TTFB' },
-        { val: '100%', lbl: 'Cache Hit Ratio' },
-        { val: '3.4x', lbl: 'Publishing Speed' }
-      ],
-      description: 'Harbor CMS features a sleek admin dashboard built with Filament 3 and Laravel. Authors publish content distributed instantly globally via Cloudflare Workers edge nodes.',
-      features: [
-        { title: 'Filament 3 Admin Suite', desc: 'Rich form builders, table actions, and permission management.' },
-        { title: 'Global Edge Distribution', desc: 'Pre-rendered content cached across 275+ edge POPs.' },
-        { title: 'Instant Content Previews', desc: 'Side-by-side authoring with draft invalidation.' }
-      ],
-      techStack: ['Laravel', 'Filament', 'Tailwind', 'Cloudflare'],
-      screenshot: 'img/harbor.png',
-      videoLog: 'DEPLOYMENT COMPLETE: Invalidated cache across 275 edge POPs in 87ms'
+      videoLog: 'AI VECTOR ENGINE: Generated 1,536-dim embeddings for article #42 [HYBRID SEARCH ACTIVE]'
     }
   };
 
@@ -413,6 +346,13 @@
     'MySQL': 'mysql/4479A1',
     'Gemini AI': 'googlegemini/8E75FF',
     'Gemini': 'googlegemini/8E75FF',
+    'Gemini Embeddings': 'googlegemini/8E75FF',
+    'Vector Search': 'postgresql/4169E1',
+    'laravel/ai': 'laravel/FF2D20',
+    'Vite': 'vite/646CFF',
+    'Intervention Image': 'php/777BB4',
+    'Pusher': 'pusher/300D4F',
+    'SQLite': 'sqlite/003B57',
     'Inertia.js': 'inertia/9553E9',
     'Filament': 'filament/FDAE4B',
     'OpenAI API': 'openai/412991',
