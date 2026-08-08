@@ -309,11 +309,14 @@
       techStack: ['Laravel', 'Livewire', 'Tailwind', 'MySQL', 'Gemini Embeddings', 'Vector Search', 'laravel/ai', 'Vite', 'Pusher'],
       screenshot: 'img/the-margin/hero.webp',
       screenshots: [
-        { id: 'hero', label: 'Salon Homepage', src: 'img/the-margin/hero.webp' },
-        { id: 'feed', label: 'Popular Reading & Topics', src: 'img/the-margin/feed.webp' },
-        { id: 'reader', label: 'Essay Reader View', src: 'img/the-margin/reader.webp' },
-        { id: 'editor', label: 'Manuscript Editor', src: 'img/the-margin/editor.webp' },
-        { id: 'moderation', label: 'Moderation & Appeals', src: 'img/the-margin/moderation.webp' }
+        { id: 'hero', label: 'Salon Homepage', src: 'img/the-margin/hero.webp', desc: 'Distraction-free digital desk introducing featured essays, spotlight articles, top tags, and author onboarding.' },
+        { id: 'feed', label: 'Popular Reading & Topics', src: 'img/the-margin/feed.webp', desc: 'Multi-tab content stream with reading stats, topic tag filtering (#PHILOSOPHY, #DESIGN), and author follow cards.' },
+        { id: 'reader', label: 'Essay Reader View', src: 'img/the-margin/reader.webp', desc: 'Typography-focused reader featuring styled drop caps, author metadata, bookmarking, and response controls.' },
+        { id: 'editor', label: 'Manuscript Editor', src: 'img/the-margin/editor.webp', desc: 'WYSIWYG manuscript builder supporting inline rich text formatting, tag taxonomies, and live draft saving.' },
+        { id: 'search', label: 'AI Hybrid Vector Search', src: 'img/the-margin/search_results.webp', desc: 'Semantic search engine using Google Gemini vector embeddings to match queries with relevancy confidence scores.' },
+        { id: 'moderation', label: 'Suspension & Appeals Portal', src: 'img/the-margin/moderation.webp', desc: 'User-facing compliance screen showing suspension reasons and a form for submitting reinstatement appeals.' },
+        { id: 'admin-flags', label: 'Moderation Flag Queue', src: 'img/the-margin/admin_flags.webp', desc: 'Admin dashboard to review user flags (Spam, Harassment), inspect reports, and take real-time enforcement actions.' },
+        { id: 'admin-users', label: 'User & Appeals Management', src: 'img/the-margin/admin_users.webp', desc: 'Platform admin desk for tracking account health, reviewing appeal logs, and handling one-click reactivations.' }
       ],
       videoLog: 'AI VECTOR ENGINE: Generated 1,536-dim embeddings for article #42 [HYBRID SEARCH ACTIVE]'
     }
@@ -470,11 +473,12 @@
               ${data.screenshots && data.screenshots.length > 0 ? `
                 <div class="cs-submedia-tabs">
                   ${data.screenshots.map((s, idx) => `
-                    <button class="cs-submedia-btn ${idx === 0 ? 'active' : ''}" data-shot-src="${s.src}">${s.label}</button>
+                    <button class="cs-submedia-btn ${idx === 0 ? 'active' : ''}" data-shot-src="${s.src}" data-shot-desc="${s.desc || ''}">${s.label}</button>
                   `).join('')}
                 </div>
               ` : ''}
               <img class="cs-screenshot-img" id="csMainScreenshot" src="${data.screenshot}" alt="${data.title} UI Showcase" />
+              <p class="cs-shot-caption" id="csShotCaption" style="margin-top:0.6rem; font-size:0.875rem; color:var(--text-muted, #888); text-align:center;">${data.screenshots && data.screenshots[0] ? (data.screenshots[0].desc || '') : ''}</p>
             </div>
             <div class="cs-media-view" id="tab-video">
               ${data.videos && data.videos.length > 0 ? `
@@ -519,7 +523,9 @@
         modalEl.querySelectorAll('[data-shot-src]').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const mainImg = modalEl.querySelector('#csMainScreenshot');
+        const caption = modalEl.querySelector('#csShotCaption');
         if (mainImg) mainImg.src = btn.dataset.shotSrc;
+        if (caption) caption.textContent = btn.dataset.shotDesc || '';
       });
     });
 
