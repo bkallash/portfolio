@@ -269,12 +269,13 @@
         { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
       ],
       techStack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind', 'MySQL', 'Gemini AI', 'Vite', 'JS PWA', 'Redis'],
-      screenshot: 'img/form-generator/form_builder.webp',
+      screenshot: 'img/form-generator/laptop-tablet-phone-mockup-template.webp',
       screenshots: [
-        { id: 'builder', label: 'Form Builder', src: 'img/form-generator/form_builder.webp' },
-        { id: 'dashboard', label: 'Analytics Dashboard', src: 'img/form-generator/dashboard.webp' },
-        { id: 'public', label: 'Public Form View', src: 'img/form-generator/public_form.webp' },
-        { id: 'submission', label: 'Submissions Data', src: 'img/form-generator/submission.webp' }
+        { id: 'mockup', label: 'Multi-Device Mockup', src: 'img/form-generator/laptop-tablet-phone-mockup-template.webp', desc: 'Responsive multi-device preview showcasing the form builder across desktop, tablet, and mobile displays.' },
+        { id: 'builder', label: 'Form Builder', src: 'img/form-generator/form_builder.webp', desc: 'Visual drag-and-drop schema editor with real-time field configuration and live preview.' },
+        { id: 'dashboard', label: 'Analytics Dashboard', src: 'img/form-generator/dashboard.webp', desc: 'Real-time response metrics, sentiment scoring, and submission trend visualizer.' },
+        { id: 'public', label: 'Public Form View', src: 'img/form-generator/public_form.webp', desc: 'Clean, responsive public form interface with offline PWA sync support.' },
+        { id: 'submission', label: 'Submissions Data', src: 'img/form-generator/submission.webp', desc: 'Tabular submission inspector with filtering, sentiment breakdown, and export options.' }
       ],
       videos: [
         { id: 'analytics_video', label: 'Analytics Walkthrough', src: 'img/form-generator/analytics.webm', log: 'GEMINI AI ENGINE: Executed sentiment & anomaly sweep across form submissions' },
@@ -307,8 +308,9 @@
         { title: 'Real-Time WebSockets & Notification Center', desc: 'Live event broadcasting via Laravel Echo and Pusher, coupled with an interactive in-app notification desk for likes, saves, new followers, and platform announcements.' }
       ],
       techStack: ['Laravel', 'Livewire', 'Tailwind', 'MySQL', 'Gemini Embeddings', 'Vector Search', 'laravel/ai', 'Vite', 'Pusher'],
-      screenshot: 'img/the-margin/hero.webp',
+      screenshot: 'img/the-margin/laptop-tablet-phone-mockup-template.webp',
       screenshots: [
+        { id: 'mockup', label: 'Multi-Device Mockup', src: 'img/the-margin/laptop-tablet-phone-mockup-template.webp', desc: 'Responsive multi-device preview showcasing the salon across desktop, tablet, and mobile displays.' },
         { id: 'hero', label: 'Salon Homepage', src: 'img/the-margin/hero.webp', desc: 'Distraction-free digital desk introducing featured essays, spotlight articles, top tags, and author onboarding.' },
         { id: 'feed', label: 'Popular Reading & Topics', src: 'img/the-margin/feed.webp', desc: 'Multi-tab content stream with reading stats, topic tag filtering (#PHILOSOPHY, #DESIGN), and author follow cards.' },
         { id: 'reader', label: 'Essay Reader View', src: 'img/the-margin/reader.webp', desc: 'Typography-focused reader featuring styled drop caps, author metadata, bookmarking, and response controls.' },

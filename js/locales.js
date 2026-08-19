@@ -184,6 +184,7 @@
           { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
         ],
         screenshots: [
+          { id: 'mockup', label: 'Multi-Device Mockup' },
           { id: 'builder', label: 'Form Builder' },
           { id: 'dashboard', label: 'Analytics Dashboard' },
           { id: 'public', label: 'Public Form View' },
@@ -217,6 +218,7 @@
           { title: 'Real-Time WebSockets & Notification Center', desc: 'Live event broadcasting via Laravel Echo and Pusher, coupled with an interactive in-app notification desk for likes, saves, new followers, and platform announcements.' }
         ],
         screenshots: [
+          { id: 'mockup', label: 'Multi-Device Mockup' },
           { id: 'hero', label: 'Salon Homepage' },
           { id: 'feed', label: 'Popular Reading & Topics' },
           { id: 'reader', label: 'Essay Reader View' },
@@ -407,6 +409,7 @@
           { title: 'مزامنة PWA دون اتصال والأمان', desc: 'تخزين الإرسالات محلياً عند الانقطاع مع مزامنة خلفية وGoogle OAuth وتنظيف المرفقات تلقائياً.' }
         ],
         screenshots: [
+          { id: 'mockup', label: 'معاينة متعددة الأجهزة' },
           { id: 'builder', label: 'منشئ النماذج' },
           { id: 'dashboard', label: 'لوحة التحليلات' },
           { id: 'public', label: 'عرض النموذج العام' },
@@ -440,6 +443,7 @@
           { title: 'WebSockets فورية ومركز إشعارات', desc: 'بث أحداث حي عبر Laravel Echo وPusher مع مكتب إشعارات تفاعلي للإعجابات والحفظ والمتابعين الجدد وإعلانات المنصة.' }
         ],
         screenshots: [
+          { id: 'mockup', label: 'معاينة متعددة الأجهزة' },
           { id: 'hero', label: 'الصفحة الرئيسية للصالون' },
           { id: 'feed', label: 'القراءة والمواضيع الشائعة' },
           { id: 'reader', label: 'عرض قراءة المقال' },
