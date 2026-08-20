@@ -56,6 +56,9 @@
       workEyebrow: 'Work',
       workTitle: 'Featured systems & projects',
       workLead: 'Drag or scroll sideways.',
+      receiptTitle: 'ReceiptSnap',
+      receiptBadge: 'MULTI-TENANT & GEMINI AI',
+      receiptDesc: 'Enterprise expense management & receipt OCR platform on Laravel & React 19 Inertia with policy controls.',
       formTitle: 'Form Generator',
       formBadge: 'TALL & GEMINI AI',
       formDesc: 'Dynamic form builder with Google Gemini AI chat builder, sentiment analysis & anomaly alerts.',
@@ -63,12 +66,11 @@
       marginBadge: 'LARAVEL 13 & AI VECTOR SEARCH',
       marginDesc: 'Modern essay publishing salon with AI vector embeddings, hybrid search & moderation.',
       allProjects: 'All projects',
-      proofEyebrow: 'Proof',
-      proofTitle: 'Clients talk',
-      proofQuote: '“Bayan ships like a co-founder - deep Laravel mastery, clean full-stack architecture, and AI automation that doubled our workflow velocity.”',
-      proofCite: 'Maya Chen · CTO, Ledgerline',
-      moreTestimonials: 'More testimonials',
-      startProject: 'Start a project'
+      nextEyebrow: 'Next Step',
+      nextTitle: 'Let’s build something together',
+      nextLead: 'Available for high-throughput Laravel backends, full-stack web applications, and custom AI agent pipelines.',
+      startProject: 'Start a project',
+      exploreWork: 'Explore all work'
     },
     about: {
       eyebrow: 'About',
@@ -97,9 +99,13 @@
       p1Badge: 'TALL & GEMINI AI',
       p1Lead: 'Laravel 12 & Livewire 3 dynamic form builder featuring Google Gemini AI conversational builder, asynchronous sentiment analysis, and automated traffic anomaly detection.',
       p2Eyebrow: '02 / 2026',
-      p2Title: 'The Margin',
-      p2Badge: 'LARAVEL 13 & AI VECTOR SEARCH',
-      p2Lead: 'Modern blogging & open publishing salon built on Laravel 13 & Tailwind CSS v4 featuring AI vector search, social follow graph, real-time Echo notifications, and moderation appeal workflows.'
+      p2Title: 'ReceiptSnap',
+      p2Badge: 'ENTERPRISE MULTI-TENANT & GEMINI AI',
+      p2Lead: 'Enterprise-grade, API-first multi-tenant expense management and AI-powered receipt capture platform built on Laravel 10+ and React 19 (Inertia.js) with Google Gemini Vision extraction, automated policy enforcement, and audit compliance.',
+      p3Eyebrow: '03 / 2026',
+      p3Title: 'The Margin',
+      p3Badge: 'LARAVEL 13 & AI VECTOR SEARCH',
+      p3Lead: 'Modern blogging & open publishing salon built on Laravel 13 & Tailwind CSS v4 featuring AI vector search, social follow graph, real-time Echo notifications, and moderation appeal workflows.'
     },
     skills: {
       eyebrow: 'Stack & Capabilities',
@@ -116,16 +122,11 @@
     },
     testimonials: {
       eyebrow: 'Proof',
-      title: 'Testimonials',
-      lead: 'Feedback from founders and engineering leaders I’ve shipped with.',
-      q1: '“Bayan ships like a co-founder - deep Laravel mastery, clean full-stack architecture, and AI automation that doubled our workflow velocity.”',
-      c1: 'Maya Chen · CTO, Ledgerline',
-      q2: '“We handed over a complex multi-tenant application and Bayan transformed it into a clean, modern Laravel + Vue platform with integrated AI document parsing.”',
-      c2: 'Sam Okonkwo · Founder, Orbit AI Studio',
-      q3: '“The best full-stack & Laravel partner we’ve worked with. Frontend polish with Livewire & Inertia, backend rigor, and queue infrastructure that never drops a task.”',
-      c3: 'Elena Voss · VP Product, Northwind',
-      q4: '“Bayan elevated our engineering culture while building custom AI workflows for our platform. Deep technical execution and rapid delivery.”',
-      c4: 'Priya Nair · Engineering Manager, Harbor'
+      title: 'Endorsements & Recommendations',
+      lead: 'Client feedback, peer recommendations, and verifiable delivery records.',
+      quote: 'Verified references and client recommendations from past projects, full-stack builds, and engineering engagements are available upon request.',
+      requestBtn: 'Request References',
+      linkedinBtn: 'LinkedIn Profile ↗'
     },
     contact: {
       eyebrow: 'Get in Touch',
@@ -162,9 +163,43 @@
       status: 'Message fired. Reply within one business day.'
     },
     projectsData: {
+      'receipt-snap': {
+        title: 'ReceiptSnap',
+        year: 'August 2026',
+        client: 'Enterprise FinTech & Expense Management',
+        role: 'Lead Full-Stack & AI Architect',
+        duration: '4 Months',
+        tagline: 'Enterprise-grade, API-first multi-tenant expense management and AI-powered receipt capture platform on Laravel 10+ and React 19 (Inertia.js).',
+        status: 'Production Architecture',
+        metrics: [
+          { val: '<2.5s', lbl: 'Vision OCR Extraction' },
+          { val: '100%', lbl: 'Tenant Isolation' },
+          { val: 'SHA-256', lbl: 'Tamper-Evident Audit' }
+        ],
+        description: 'ReceiptSnap is an enterprise-grade, API-first, multi-tenant expense management and AI-powered receipt capture platform built with Laravel 10+ and React 19 via Inertia.js v3. Designed for strict enterprise compliance and high-throughput financial workflows, it features multi-tenant organization boundaries, granular role-based access control (RBAC across Owner, Admin, Manager, Accountant, and Employee), Google Gemini Vision OCR with automated itemized line-item extraction, real-time policy and budget enforcement, NACHA/SEPA banking reimbursement batching, multi-ERP exports (QuickBooks, Xero, NetSuite, SAP), and SHA-256 checksummed immutable audit trails.',
+        features: [
+          { title: 'AI Receipt OCR & Structured Itemization Pipeline', desc: 'ReceiptParserAgent parses receipt images via Google Gemini Vision into structured merchant, currency, taxes, payment info, and itemized line items with async retry queues and circuit breaker protection.' },
+          { title: 'Multi-Tenant Isolation & Granular RBAC Portals', desc: 'Sanctum token-ability multi-tenancy with strict organization context scoping, secure email invitation lifecycles, and dedicated portals for Employees, Managers, Admins, and Accountants.' },
+          { title: 'Real-Time Policy Compliance & Image Deduplication', desc: 'PolicyEnforcementService instantly flags missing receipts over thresholds, weekend spends, and budget overruns, paired with dHash perceptual image hashing to block duplicate receipt re-submissions.' },
+          { title: 'ERP Accounting Sync & Tamper-Evident Audit Trail', desc: 'Direct export formatting for QuickBooks, Xero, NetSuite, and SAP ledgers, coupled with SHA-256 checksummed immutable logs and one-click ZIP compliance evidence packages.' }
+        ],
+        screenshots: [
+          { id: 'mockup', label: 'Multi-Device Mockup' },
+          { id: 'landing', label: 'Landing Page' },
+          { id: 'scan', label: 'AI Receipt Scan' },
+          { id: 'approvals', label: 'Manager Approvals' },
+          { id: 'reimbursement', label: 'Batch Reimbursements' },
+          { id: 'gl', label: 'General Ledger Sync' },
+          { id: 'tax_ledger', label: 'Tax & VAT Ledger' },
+          { id: 'audit', label: 'Audit Trail & Compliance' },
+          { id: 'admin_overview', label: 'Admin Health & KPIs' },
+          { id: 'departments', label: 'Department Budgets' },
+          { id: 'members', label: 'RBAC Team Roster' }
+        ]
+      },
       'form-generator': {
         title: 'Form Generator',
-        year: '2026',
+        year: 'June 2026',
         client: 'SaaS Form Builder Ecosystem',
         role: 'Lead Full-Stack Architect',
         duration: '3 Months',
@@ -180,7 +215,6 @@
           { title: 'Conversational Gemini AI Builder', desc: 'Create, modify, and expand multi-step form schemas iteratively using natural language in the sidebar AI chat.' },
           { title: 'AI Sentiment & Sub-Tone Analysis', desc: 'Asynchronously evaluates open-ended responses to score sentiment (0.0–1.0) and detect sub-tones (frustrated, excited, satisfied).' },
           { title: 'Automated Anomaly & Traffic Alert Engine', desc: 'Monitors submission streams to flag 70%+ traffic drops, 150%+ spikes, negative review clusters, and quiet forms.' },
-          { title: 'Visual Drag-and-Drop & Multi-Step Logic', desc: 'Arrange 15+ field types with conditional visibility rules, multi-page step layouts, and live previews.' },
           { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
         ],
         screenshots: [
@@ -239,7 +273,7 @@
       about: { title: 'نبذة - بيان كلاش' },
       projects: { title: 'المشاريع - بيان كلاش' },
       skills: { title: 'المهارات - بيان كلاش' },
-      testimonials: { title: 'آراء العملاء - بيان كلاش' },
+      testimonials: { title: 'آراء وتوصيات - بيان كلاش' },
       contact: { title: 'تواصل - بيان كلاش' }
     },
     nav: {
@@ -247,7 +281,7 @@
       about: 'نبذة',
       projects: 'المشاريع',
       skills: 'المهارات',
-      testimonials: 'آراء العملاء',
+      testimonials: 'التوصيات',
       contact: 'تواصل',
       menuToggle: 'فتح أو إغلاق قائمة التنقل',
       langToggle: 'تبديل اللغة',
@@ -281,6 +315,9 @@
       workEyebrow: 'الأعمال',
       workTitle: 'أنظمة ومشاريع مختارة',
       workLead: 'اسحب أو مرّر أفقياً.',
+      receiptTitle: 'ReceiptSnap',
+      receiptBadge: 'متعدد المستأجرين وGEMINI AI',
+      receiptDesc: 'منصة مؤسسية لإدارة النفقات واستخراج الفواتير بـ OCR على Laravel وReact 19 مع ضوابط السياسات.',
       formTitle: 'Form Generator',
       formBadge: 'TALL وGEMINI AI',
       formDesc: 'منشئ نماذج ديناميكي مع دردشة Gemini AI وتحليل المشاعر وتنبيهات الشذوذ.',
@@ -288,12 +325,11 @@
       marginBadge: 'LARAVEL 13 وبحث متجهي بالذكاء الاصطناعي',
       marginDesc: 'صالون نشر مقالات حديث مع تضمينات متجهية وبحث هجين وإشراف.',
       allProjects: 'كل المشاريع',
-      proofEyebrow: 'الدليل',
-      proofTitle: 'العملاء يتحدثون',
-      proofQuote: '«بيان يسلّم كشريك مؤسس - إتقان عميق لـ Laravel، وهندسة Full-Stack نظيفة، وأتمتة ذكاء اصطناعي ضاعفت سرعة سير العمل.»',
-      proofCite: 'مايا تشين · المديرة التقنية، Ledgerline',
-      moreTestimonials: 'المزيد من الآراء',
-      startProject: 'ابدأ مشروعاً'
+      nextEyebrow: 'الخطوة التالية',
+      nextTitle: 'لنبنِ شيئاً مميزاً معاً',
+      nextLead: 'متاح للأنظمة الخلفية عالية الإنتاجية على Laravel، وتطبيقات الويب Full-Stack، ومسارات وكلاء الذكاء الاصطناعي.',
+      startProject: 'ابدأ مشروعاً',
+      exploreWork: 'استكشف كافة الأعمال'
     },
     about: {
       eyebrow: 'نبذة',
@@ -322,9 +358,13 @@
       p1Badge: 'TALL وGEMINI AI',
       p1Lead: 'منشئ نماذج ديناميكي على Laravel 12 وLivewire 3 مع باني محادثة Google Gemini AI، وتحليل مشاعر غير متزامن، وكشف شذوذ حركة تلقائي.',
       p2Eyebrow: '02 / 2026',
-      p2Title: 'The Margin',
-      p2Badge: 'LARAVEL 13 وبحث متجهي',
-      p2Lead: 'صالون تدوين ونشر مفتوح على Laravel 13 وTailwind CSS v4 مع بحث متجهي بالذكاء الاصطناعي، وشبكة متابعة اجتماعية، وإشعارات Echo فورية، ومسارات استئناف الإشراف.'
+      p2Title: 'ReceiptSnap',
+      p2Badge: 'متعدد المستأجرين وGEMINI AI',
+      p2Lead: 'منصة مؤسسية متعددة المستأجرين لإدارة النفقات واستخراج بيانات الفواتير بالذكاء الاصطناعي على Laravel 10+ وReact 19 (Inertia.js) مع استخراج Google Gemini Vision وإنفاذ السياسات والامتثال.',
+      p3Eyebrow: '03 / 2026',
+      p3Title: 'The Margin',
+      p3Badge: 'LARAVEL 13 وبحث متجهي',
+      p3Lead: 'صالون تدوين ونشر مفتوح على Laravel 13 وTailwind CSS v4 مع بحث متجهي بالذكاء الاصطناعي، وشبكة متابعة اجتماعية، وإشعارات Echo فورية، ومسارات استئناف الإشراف.'
     },
     skills: {
       eyebrow: 'المكدس والقدرات',
@@ -341,16 +381,11 @@
     },
     testimonials: {
       eyebrow: 'الدليل',
-      title: 'آراء العملاء',
-      lead: 'ملاحظات من مؤسسين وقادة هندسة عملت معهم على التسليم.',
-      q1: '«بيان يسلّم كشريك مؤسس - إتقان عميق لـ Laravel، وهندسة Full-Stack نظيفة، وأتمتة ذكاء اصطناعي ضاعفت سرعة سير العمل.»',
-      c1: 'مايا تشين · المديرة التقنية، Ledgerline',
-      q2: '«سلمنا تطبيقاً معقداً متعدد المستأجرين فحوّله بيان إلى منصة Laravel + Vue حديثة ونظيفة مع تحليل مستندات بالذكاء الاصطناعي.»',
-      c2: 'سام أوكونكو · مؤسس Orbit AI Studio',
-      q3: '«أفضل شريك Full-Stack وLaravel عملنا معه. صقل واجهات بـ Livewire وInertia، وصرامة خلفية، وبنية طوابير لا تُسقط مهمة.»',
-      c3: 'إلينا فوس · نائبة رئيس المنتج، Northwind',
-      q4: '«رفع بيان ثقافة الهندسة لدينا أثناء بناء سير عمل ذكاء اصطناعي مخصصة لمنصتنا. تنفيذ تقني عميق وتسليم سريع.»',
-      c4: 'بريا ناير · مديرة هندسة، Harbor'
+      title: 'آراء وتوصيات العملاء',
+      lead: 'ملاحظات العملاء والتوصيات المهنية وسجلات التسليم الموثوقة.',
+      quote: 'تتوفر التوصيات والمراجع المعتمدة من العملاء والفرق الهندسية السابقة عند الطلب.',
+      requestBtn: 'طلب المراجع والتوصيات',
+      linkedinBtn: 'الملف الشخصي على LinkedIn ↗'
     },
     contact: {
       eyebrow: 'تواصل',
@@ -387,9 +422,43 @@
       status: 'أُرسلت الرسالة. الرد خلال يوم عمل واحد.'
     },
     projectsData: {
+      'receipt-snap': {
+        title: 'ReceiptSnap',
+        year: 'أغسطس 2026',
+        client: 'إدارة نفقات المؤسسات والتقنيات المالية',
+        role: 'مهندس Full-Stack وAI رئيسي',
+        duration: '4 أشهر',
+        tagline: 'منصة مؤسسية متعددة المستأجرين لإدارة النفقات والتقاط الفواتير بالذكاء الاصطناعي على Laravel 10+ وReact 19 (Inertia.js).',
+        status: 'معمارية إنتاج',
+        metrics: [
+          { val: '<2.5 ثانية', lbl: 'استخراج OCR الرؤية' },
+          { val: '100%', lbl: 'عزل المستأجرين' },
+          { val: 'SHA-256', lbl: 'سجل تدقيق غير قابل للتلاعب' }
+        ],
+        description: 'ReceiptSnap منصة مؤسسية موجهة للواجهات البرمجية (API-First) ومتعددة المستأجرين لإدارة النفقات واستخراج بيانات الإيصالات بالذكاء الاصطناعي مبنية على Laravel 10+ وReact 19 عبر Inertia.js v3. مصممة لتلبية أعلى معايير الامتثال المالي، وتتضمن عزلاً صارماً لبيانات المؤسسات، وتحكماً في الوصول بالأدوار (RBAC للمالك، المدير، المحاسب، والموظف)، واستخراجاً للبنود عبر Google Gemini Vision، وإنفاذاً للسياسات والميزانيات، ودفعات تعويض مصرفية (NACHA وSEPA XML)، وتصديراً لمنظومات ERP (QuickBooks وXero وNetSuite وSAP)، وسجلات تدقيق محصنة بتوقيع SHA-256.',
+        features: [
+          { title: 'مسار مسح الإيصالات بـ OCR وبنود مفصلة', desc: 'يحلل ReceiptParserAgent صور الفواتير عبر Google Gemini Vision إلى بيانات منظمة للمتجر والعملة والضرائب وبنود المنتجات مع طوابير غير متزامنة وقواطع دوائر الحماية.' },
+          { title: 'عزل متعدد المستأجرين وبوابات مخصصة', desc: 'عزل صارم للبيانات عبر قدرات Sanctum Tokens، مع دورة حياة دعوات البريد الإلكتروني وبوابات متخصصة لكل دور وظيفي.' },
+          { title: 'امتثال السياسات وكشف تكرار الصور', desc: 'تقييم لحظي للنفقات يكتشف الفواتير المفقودة ومشتريات العطلات وتجاوز الميزانيات، مع تقنية dHash لمنع إعادة رفع نفس صورة الفاتورة.' },
+          { title: 'مزامنة ERP وسجلات تدقيق غير قابلة للتلاعب', desc: 'تصدير محاسبي مباشر لمنظومات QuickBooks وXero وNetSuite وSAP، مع سجلات تدقيق مشفرة بـ SHA-256 وحزم امتثال ZIP بنقرة واحدة.' }
+        ],
+        screenshots: [
+          { id: 'mockup', label: 'معاينة متعددة الأجهزة' },
+          { id: 'landing', label: 'الصفحة الرئيسية' },
+          { id: 'scan', label: 'مسح الفواتير بالذكاء الاصطناعي' },
+          { id: 'approvals', label: 'موافقات المديرين' },
+          { id: 'reimbursement', label: 'دفعات التعويض المجمعة' },
+          { id: 'gl', label: 'مزامنة دفتر الأستاذ العام' },
+          { id: 'tax_ledger', label: 'دفتر الضرائب والقيمة المضافة' },
+          { id: 'audit', label: 'سجل التدقيق والامتثال' },
+          { id: 'admin_overview', label: 'لوحة تحكم الإدارة' },
+          { id: 'departments', label: 'ميزانيات الأقسام' },
+          { id: 'members', label: 'إدارة أعضاء الفريق' }
+        ]
+      },
       'form-generator': {
         title: 'Form Generator',
-        year: '2026',
+        year: 'يونيو 2026',
         client: 'منظومة منشئ نماذج SaaS',
         role: 'مهندس Full-Stack رئيسي',
         duration: '3 أشهر',
@@ -405,7 +474,6 @@
           { title: 'باني Gemini AI الحواري', desc: 'إنشاء وتعديل وتوسيع مخططات نماذج متعددة الخطوات بشكل تكراري بلغة طبيعية عبر دردشة الذكاء الاصطناعي الجانبية.' },
           { title: 'تحليل المشاعر والنغمات الفرعية', desc: 'يقيّم الردود المفتوحة بشكل غير متزامن لتسجيل المشاعر (0.0–1.0) واكتشاف نغمات فرعية (إحباط، حماس، رضا).' },
           { title: 'محرك تنبيهات الشذوذ والحركة', desc: 'يراقب تدفقات الإرسال للإشارة إلى انخفاض حركة 70%+، وارتفاعات 150%+، وتجمعات مراجعات سلبية، والنماذج الهادئة.' },
-          { title: 'سحب وإفلات ومنطق متعدد الخطوات', desc: 'ترتيب أكثر من 15 نوع حقل مع قواعد ظهور شرطية وتخطيطات صفحات متعددة ومعاينات حية.' },
           { title: 'مزامنة PWA دون اتصال والأمان', desc: 'تخزين الإرسالات محلياً عند الانقطاع مع مزامنة خلفية وGoogle OAuth وتنظيف المرفقات تلقائياً.' }
         ],
         screenshots: [

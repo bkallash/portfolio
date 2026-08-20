@@ -242,12 +242,11 @@
     'Gemini AI': `<svg viewBox="0 0 24 24" fill="#8E75FF"><path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"/></svg>`,
     'Gemini': `<svg viewBox="0 0 24 24" fill="#8E75FF"><path d="M12 0C12 6.627 6.627 12 0 12c6.627 0 12 5.373 12 12 0-6.627 5.373-12 12-12-6.627 0-12-5.373-12-12z"/></svg>`
   };
-
   const PROJECTS_DATA = {
     'form-generator': {
       id: 'form-generator',
       title: 'Form Generator',
-      year: '2026',
+      year: 'June 2026',
       client: 'SaaS Form Builder Ecosystem',
       role: 'Lead Full-Stack Architect',
       duration: '3 Months',
@@ -265,7 +264,6 @@
         { title: 'Conversational Gemini AI Builder', desc: 'Create, modify, and expand multi-step form schemas iteratively using natural language in the sidebar AI chat.' },
         { title: 'AI Sentiment & Sub-Tone Analysis', desc: 'Asynchronously evaluates open-ended responses to score sentiment (0.0–1.0) and detect sub-tones (frustrated, excited, satisfied).' },
         { title: 'Automated Anomaly & Traffic Alert Engine', desc: 'Monitors submission streams to flag 70%+ traffic drops, 150%+ spikes, negative review clusters, and quiet forms.' },
-        { title: 'Visual Drag-and-Drop & Multi-Step Logic', desc: 'Arrange 15+ field types with conditional visibility rules, multi-page step layouts, and live previews.' },
         { title: 'PWA Offline Sync & Security', desc: 'Stages submissions locally when offline with background sync, Google OAuth, and automatic attachment cleanup.' }
       ],
       techStack: ['Laravel', 'Livewire', 'Alpine.js', 'Tailwind', 'MySQL', 'Gemini AI', 'Vite', 'JS PWA', 'Redis'],
@@ -280,8 +278,46 @@
       videos: [
         { id: 'analytics_video', label: 'Analytics Walkthrough', src: 'img/form-generator/analytics.webm', log: 'GEMINI AI ENGINE: Executed sentiment & anomaly sweep across form submissions' },
         { id: 'sync_video', label: 'Offline PWA Sync Demo', src: 'img/form-generator/offline-sync-submissions.webm', log: 'PWA SERVICE WORKER: Reconnected — Synced 18 queued offline submissions (0 loss)' }
+      ]
+    },
+    'receipt-snap': {
+      id: 'receipt-snap',
+      title: 'ReceiptSnap',
+      year: 'August 2026',
+      client: 'Enterprise FinTech & Expense Management',
+      role: 'Lead Full-Stack & AI Architect',
+      duration: '4 Months',
+      tagline: 'Enterprise-grade, API-first multi-tenant expense management and AI-powered receipt capture platform on Laravel 10+ and React 19 (Inertia.js).',
+      status: 'Production Architecture',
+      demoUrl: 'https://github.com/bkallash/receipt-snap',
+      githubUrl: 'https://github.com/bkallash/receipt-snap',
+      metrics: [
+        { val: '<2.5s', lbl: 'Vision OCR Extraction' },
+        { val: '100%', lbl: 'Tenant Isolation' },
+        { val: 'SHA-256', lbl: 'Tamper-Evident Audit' }
       ],
-      videoLog: 'GEMINI AI CHAT: Interactive sidebar form schema builder active'
+      description: 'ReceiptSnap is an enterprise-grade, API-first, multi-tenant expense management and AI-powered receipt capture platform built with Laravel 10+ and React 19 via Inertia.js v3. Designed for strict enterprise compliance and high-throughput financial workflows, it features multi-tenant organization boundaries, granular role-based access control (RBAC across Owner, Admin, Manager, Accountant, and Employee), Google Gemini Vision OCR with automated itemized line-item extraction, real-time policy and budget enforcement, NACHA/SEPA banking reimbursement batching, multi-ERP exports (QuickBooks, Xero, NetSuite, SAP), and SHA-256 checksummed immutable audit trails.',
+      features: [
+        { title: 'AI Receipt OCR & Structured Itemization Pipeline', desc: 'ReceiptParserAgent parses receipt images via Google Gemini Vision into structured merchant, currency, taxes, payment info, and itemized line items with async retry queues and circuit breaker protection.' },
+        { title: 'Multi-Tenant Isolation & Granular RBAC Portals', desc: 'Sanctum token-ability multi-tenancy with strict organization context scoping, secure email invitation lifecycles, and dedicated portals for Employees, Managers, Admins, and Accountants.' },
+        { title: 'Real-Time Policy Compliance & Image Deduplication', desc: 'PolicyEnforcementService instantly flags missing receipts over thresholds, weekend spends, and budget overruns, paired with dHash perceptual image hashing to block duplicate receipt re-submissions.' },
+        { title: 'ERP Accounting Sync & Tamper-Evident Audit Trail', desc: 'Direct export formatting for QuickBooks, Xero, NetSuite, and SAP ledgers, coupled with SHA-256 checksummed immutable logs and one-click ZIP compliance evidence packages.' }
+      ],
+      techStack: ['Laravel', 'React', 'Inertia.js', 'TypeScript', 'Tailwind', 'Gemini AI', 'laravel/ai', 'Postgres', 'Redis', 'Vite'],
+      screenshot: 'img/receipt-snap/laptop-tablet-phone-mockup-template.webp',
+      screenshots: [
+        { id: 'mockup', label: 'Multi-Device Mockup', src: 'img/receipt-snap/laptop-tablet-phone-mockup-template.webp', desc: 'Responsive multi-device preview showcasing ReceiptSnap across desktop, tablet, and mobile displays.' },
+        { id: 'landing', label: 'Landing Page', src: 'img/receipt-snap/landing_page.webp', desc: 'Enterprise SaaS marketing desk presenting automated expense management, vision OCR scanning, and ERP sync.' },
+        { id: 'scan', label: 'AI Receipt Scan', src: 'img/receipt-snap/receipt_scan.webp', desc: 'Interactive dropzone and live OCR itemization inspector displaying parsed merchant, amounts, tax, and line items.' },
+        { id: 'approvals', label: 'Manager Approvals', src: 'img/receipt-snap/manager_approvals.webp', desc: 'Real-time approval desk with policy violation alerts, budget limit indicators, and mandatory rejection rationales.' },
+        { id: 'reimbursement', label: 'Batch Reimbursements', src: 'img/receipt-snap/finance_reimbursement.webp', desc: 'Accounting disbursement hub grouping approved claims into batch payouts with NACHA & SEPA banking file generation.' },
+        { id: 'gl', label: 'General Ledger Sync', src: 'img/receipt-snap/finance_gl.webp', desc: 'Automated GL code mapping and journal entry export interface for QuickBooks, Xero, NetSuite, and SAP.' },
+        { id: 'tax_ledger', label: 'Tax & VAT Ledger', src: 'img/receipt-snap/finance_tax_ledger.webp', desc: 'Comprehensive tax ledger breakdown itemizing deductible VAT rates, taxable transactions, and filing exports.' },
+        { id: 'audit', label: 'Audit Trail & Compliance', src: 'img/receipt-snap/finance_audit_log.webp', desc: 'Tamper-evident SHA-256 checksummed event log tracking every state mutation, user action, IP, and diff.' },
+        { id: 'admin_overview', label: 'Admin Health & KPIs', src: 'img/receipt-snap/admin_overview.webp', desc: 'Executive dashboard tracking spend velocity, category burn rates, pending queue volume, and tenant health.' },
+        { id: 'departments', label: 'Department Budgets', src: 'img/receipt-snap/admin_departments.webp', desc: 'Departmental hierarchy manager with configurable monthly, quarterly, and annual spending ceilings.' },
+        { id: 'members', label: 'RBAC Team Roster', src: 'img/receipt-snap/admin_members.webp', desc: 'Organization member management with role provisioning (Admin, Manager, Accountant, Employee) and invitation flows.' }
+      ]
     },
     'the-margin': {
       id: 'the-margin',
@@ -319,8 +355,7 @@
         { id: 'moderation', label: 'Suspension & Appeals Portal', src: 'img/the-margin/moderation.webp', desc: 'User-facing compliance screen showing suspension reasons and a form for submitting reinstatement appeals.' },
         { id: 'admin-flags', label: 'Moderation Flag Queue', src: 'img/the-margin/admin_flags.webp', desc: 'Admin dashboard to review user flags (Spam, Harassment), inspect reports, and take real-time enforcement actions.' },
         { id: 'admin-users', label: 'User & Appeals Management', src: 'img/the-margin/admin_users.webp', desc: 'Platform admin desk for tracking account health, reviewing appeal logs, and handling one-click reactivations.' }
-      ],
-      videoLog: 'AI VECTOR ENGINE: Generated 1,536-dim embeddings for article #42 [HYBRID SEARCH ACTIVE]'
+      ]
     }
   };
 
@@ -345,16 +380,25 @@
 
   const TECH_ICON_SLUGS = {
     'Laravel': 'laravel/FF2D20',
+    'Laravel 10+': 'laravel/FF2D20',
+    'Laravel 11+': 'laravel/FF2D20',
+    'Laravel 12': 'laravel/FF2D20',
+    'Laravel 13': 'laravel/FF2D20',
     'Livewire': 'livewire/FB70A9',
+    'Livewire 3': 'livewire/FB70A9',
     'Alpine.js': 'alpinedotjs/8BC0D0',
     'Tailwind': 'tailwindcss/06B6D4',
+    'Tailwind CSS': 'tailwindcss/06B6D4',
+    'Tailwind CSS v4': 'tailwindcss/06B6D4',
     'MySQL': 'mysql/4479A1',
     'Gemini AI': 'googlegemini/8E75FF',
     'Gemini': 'googlegemini/8E75FF',
+    'Gemini Vision': 'googlegemini/8E75FF',
     'Gemini Embeddings': 'googlegemini/8E75FF',
     'Vector Search': 'postgresql/4169E1',
     'laravel/ai': 'laravel/FF2D20',
     'Vite': 'vite/646CFF',
+    'Vite 8': 'vite/646CFF',
     'Intervention Image': 'php/777BB4',
     'Pusher': 'pusher/300D4F',
     'SQLite': 'sqlite/003B57',
@@ -364,7 +408,9 @@
     'OpenAI': 'openai/412991',
     'Vue': 'vuedotjs/4FC08D',
     'React': 'react/61DAFB',
+    'React 19': 'react/61DAFB',
     'Postgres': 'postgresql/4169E1',
+    'PostgreSQL': 'postgresql/4169E1',
     'Redis': 'redis/FF4438',
     'Python': 'python/3776AB',
     'Cloudflare': 'cloudflare/F38020',
@@ -459,18 +505,20 @@
         </div>
 
         <div class="cs-section">
-          <h3 class="cs-section-title">Interface &amp; Demo Showcase</h3>
+          <h3 class="cs-section-title">${data.videos && data.videos.length > 0 ? 'Interface &amp; Demo Showcase' : 'Interface Showcase'}</h3>
           <div class="cs-media-showcase">
-            <div class="cs-media-tabs">
-              <button class="cs-media-tab active" data-tab="screenshot">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                UI Screenshot
-              </button>
-              <button class="cs-media-tab" data-tab="video">
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                ${data.videos && data.videos.length > 0 ? `Video Demos (${data.videos.length})` : 'Interactive Video Demo'}
-              </button>
-            </div>
+            ${data.videos && data.videos.length > 0 ? `
+              <div class="cs-media-tabs">
+                <button class="cs-media-tab active" data-tab="screenshot">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  UI Screenshot
+                </button>
+                <button class="cs-media-tab" data-tab="video">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Video Demos (${data.videos.length})
+                </button>
+              </div>
+            ` : ''}
             <div class="cs-media-view active" id="tab-screenshot">
               ${data.screenshots && data.screenshots.length > 0 ? `
                 <div class="cs-submedia-tabs">
@@ -482,8 +530,8 @@
               <img class="cs-screenshot-img" id="csMainScreenshot" src="${data.screenshot}" alt="${data.title} UI Showcase" />
               <p class="cs-shot-caption" id="csShotCaption" style="margin-top:0.6rem; font-size:0.875rem; color:var(--text-muted, #888); text-align:center;">${data.screenshots && data.screenshots[0] ? (data.screenshots[0].desc || '') : ''}</p>
             </div>
-            <div class="cs-media-view" id="tab-video">
-              ${data.videos && data.videos.length > 0 ? `
+            ${data.videos && data.videos.length > 0 ? `
+              <div class="cs-media-view" id="tab-video">
                 <div class="cs-submedia-tabs">
                   ${data.videos.map((v, idx) => `
                     <button class="cs-submedia-btn ${idx === 0 ? 'active' : ''}" data-video-src="${v.src}" data-video-log="${v.log}">${v.label}</button>
@@ -496,24 +544,8 @@
                     <span class="cs-video-log-text" id="csVideoLogText">${data.videos[0].log}</span>
                   </div>
                 </div>
-              ` : `
-                <div class="cs-video-player">
-                  <div class="cs-video-screen" style="background-image: url('${data.screenshot}');">
-                    <div class="cs-video-overlay-log">
-                      <span class="cs-video-status-dot"></span>
-                      <span class="cs-video-log-text">${data.videoLog}</span>
-                    </div>
-                  </div>
-                  <div class="cs-video-controls">
-                    <button class="cs-video-play-btn" id="csPlayBtn">▶</button>
-                    <div class="cs-video-progress-bar" id="csProgressBar">
-                      <div class="cs-video-progress-fill" id="csProgressFill"></div>
-                    </div>
-                    <span class="cs-video-time" id="csTimeText">00:00 / 00:30</span>
-                  </div>
-                </div>
-              `}
-            </div>
+              </div>
+            ` : ''}
           </div>
         </div>
       </div>
@@ -581,42 +613,6 @@
         // Fallback prompt if clipboard API blocked
         prompt('Copy project URL:', window.location.href);
       });
-    });
-
-    // Video play/pause simulation logic (fallback for projects without native HTML5 video)
-    const playBtn = modalEl.querySelector('#csPlayBtn');
-    const fillEl = modalEl.querySelector('#csProgressFill');
-    const timeText = modalEl.querySelector('#csTimeText');
-
-    videoProgress = 0;
-    isVideoPlaying = false;
-    clearInterval(videoTimer);
-
-    function updateVideoUI() {
-      if (fillEl) fillEl.style.width = `${(videoProgress / 30) * 100}%`;
-      if (timeText) {
-        const currentSec = Math.floor(videoProgress).toString().padStart(2, '0');
-        timeText.textContent = `00:${currentSec} / 00:30`;
-      }
-      if (playBtn) playBtn.textContent = isVideoPlaying ? '❚❚' : '▶';
-    }
-
-    playBtn?.addEventListener('click', () => {
-      isVideoPlaying = !isVideoPlaying;
-      if (isVideoPlaying) {
-        videoTimer = setInterval(() => {
-          videoProgress += 0.25;
-          if (videoProgress >= 30) {
-            videoProgress = 0;
-            isVideoPlaying = false;
-            clearInterval(videoTimer);
-          }
-          updateVideoUI();
-        }, 250);
-      } else {
-        clearInterval(videoTimer);
-      }
-      updateVideoUI();
     });
   }
 

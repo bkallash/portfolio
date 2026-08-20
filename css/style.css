@@ -858,17 +858,20 @@ html[dir="rtl"] .about-block::before {
   display: none;
 }
 
-/* Testimonials — ticker style */
+/* Project & Card Lists */
+.project-list,
 .testimonial-list {
   display: grid;
   gap: 0;
 }
 
+.project-item,
 .testimonial {
   padding: 2rem 0;
   border-bottom: 2px solid var(--ink);
 }
 
+.project-item:first-child,
 .testimonial:first-child {
   border-top: 2px solid var(--ink);
 }
