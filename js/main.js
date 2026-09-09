@@ -356,6 +356,37 @@
         { id: 'admin-flags', label: 'Moderation Flag Queue', src: 'img/the-margin/admin_flags.webp', desc: 'Admin dashboard to review user flags (Spam, Harassment), inspect reports, and take real-time enforcement actions.' },
         { id: 'admin-users', label: 'User & Appeals Management', src: 'img/the-margin/admin_users.webp', desc: 'Platform admin desk for tracking account health, reviewing appeal logs, and handling one-click reactivations.' }
       ]
+    },
+    'ytui': {
+      id: 'ytui',
+      title: 'YTUI',
+      year: 'September 2026',
+      client: 'Open-Source CLI Tool',
+      role: 'Solo Developer',
+      duration: '2 Months',
+      tagline: 'A sleek, keyboard-driven Terminal User Interface (TUI) client and download manager for yt-dlp, built with Python, Textual, and Rich.',
+      status: 'Open-Source / PyPI',
+      demoUrl: 'https://pypi.org/project/ytui-media/',
+      githubUrl: 'https://github.com/bkallash/YTUI',
+      metrics: [
+        { val: '1,000+', lbl: 'Supported Sites' },
+        { val: '17', lbl: 'Handcrafted Themes' },
+        { val: 'RTL', lbl: 'Native Text Engine' }
+      ],
+      description: 'YTUI brings the unmatched downloading power of yt-dlp and FFmpeg into a modern, interactive terminal interface built with Python, Textual, and Rich. It replaces complex CLI flags with a visual stream selector for picking exact video and audio streams side-by-side, a background queue manager with live progress, an interactive playlist configurator, rich media embedding (subtitles, thumbnails, metadata tags, chapter markers), network auto-resume with byte-offset recovery, 17 handcrafted dark/light themes, and a native RTL text engine for Arabic, Hebrew, Persian, and Urdu metadata.',
+      features: [
+        { title: 'Dual-Column Stream Matrix', desc: 'Pick exact video (4K to 360p) and audio (320k to 64k) streams side-by-side with 1-click presets for Best Quality, 1080p FHD, Smallest Size, and Audio Only MP3.' },
+        { title: 'Multi-Worker Queue & Download Manager', desc: 'Concurrent background downloads with live speed, ETA, progress bars, stdout logs, and task controls (pause, resume, retry, cancel, quick file launch).' },
+        { title: 'Interactive Playlist & Batch Downloader', desc: 'Track selection with checkboxes, batch tools (Select All, Deselect All, Invert), and live estimation of total runtime and download size.' },
+        { title: 'Network Resiliency & Smart Auto-Resume', desc: 'Byte-offset .part file resumption, exponential retry backoff for unstable networks, and automatic HTTP 403 fallback with embedded web clients.' }
+      ],
+      techStack: ['Python', 'Textual', 'Rich', 'yt-dlp', 'FFmpeg'],
+      screenshot: 'img/ytui/format_screen.svg',
+      screenshots: [
+        { id: 'format', label: 'Format Selection', src: 'img/ytui/format_screen.svg', desc: 'Dual-column side-by-side stream matrix for picking exact video and audio format pairings with container selection and 1-click presets.' },
+        { id: 'download', label: 'Download Manager', src: 'img/ytui/download_screen.svg', desc: 'Multi-worker download queue with live speed, ETA, progress bars, real-time yt-dlp stdout logs, and task controls.' },
+        { id: 'settings', label: 'Settings & Themes', src: 'img/ytui/settings_screen.svg', desc: 'Full settings screen with 17 handcrafted themes, cookie management, SponsorBlock integration, and output configuration.' }
+      ]
     }
   };
 
@@ -417,7 +448,11 @@
     'TypeScript': 'typescript/3178C6',
     'Pgvector': 'postgresql/4169E1',
     'JS PWA': 'pwa/5A0FC8',
-    'PWA': 'pwa/5A0FC8'
+    'PWA': 'pwa/5A0FC8',
+    'Textual': 'python/3776AB',
+    'Rich': 'python/3776AB',
+    'yt-dlp': 'youtube/FF0000',
+    'FFmpeg': 'ffmpeg/007808'
   };
 
   function getTechPillHtml(techName) {
