@@ -285,7 +285,7 @@
       const order = ['receipt-snap', 'form-generator', 'the-margin', 'cinematch', 'fluentia'], fills = ['', ' c-tide', ' c-raised'];
       onLang(() => {
         track.innerHTML = order.map(byId).map((p, i) => `
-          <a class="card${fills[i % 3]}" href="project.html?p=${p.id}">
+          <a class="card${fills[i % 3]}" href="project.html#${p.id}">
             ${media(p, 'shot')}
             <div class="card-body"><h3>${esc(P(p).name)}</h3><p>${esc(P(p).line)}</p><p class="stack">${esc(p.stack.join(', '))}</p><span class="more">${esc(t('work.read'))}</span></div>
           </a>`).join('') + `
@@ -310,7 +310,7 @@
     function render() {
       list.innerHTML = D.projects.map(p => `
         <li class="prow" data-kind="${p.kind}"${match(p) ? '' : ' hidden'}>
-          <a href="project.html?p=${p.id}">
+          <a href="project.html#${p.id}">
             ${media(p, 'prow-media')}
             <div><p class="kind">${esc(kindLabel(p))}, ${esc(p.year)}</p><h2>${esc(P(p).name)}</h2><p class="line">${esc(P(p).line)}</p><p class="stack">${esc(p.stack.join(', '))}</p><span class="more">${esc(t('work.read'))}</span></div>
           </a>
@@ -327,8 +327,11 @@
   function casePage() {
     const box = $('#case');
     if (!box) return;
-    const id = new URLSearchParams(location.search).get('p');
+    // #id is the link format; ?p=id still works for links shared before
+    const id = decodeURIComponent(location.hash.slice(1)) || new URLSearchParams(location.search).get('p');
     const p = byId(id);
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    addEventListener('hashchange', () => { scrollTo(0, 0); location.reload(); });
     if (!p) {
       titleOverride = () => t('title.projects');
       onLang(() => { box.innerHTML = `<section class="cs-hero on-deep" data-dark><div class="wrap"><p class="lead">${esc(t('caseStudy.notFound'))}</p><div class="ctas" style="margin-top:32px"><a class="btn solid" href="projects.html">${esc(t('caseStudy.all'))}</a></div></div></section>`; });
@@ -379,7 +382,7 @@
           ${note ? `<p class="note" style="margin-top:40px">${esc(note)}</p>` : ''}
         </div></section>
         ${shots || vids ? `<section class="section" style="padding-top:0"><div class="wrap"><h2>${esc(cs.gallery)}</h2><div class="gallery">${vids}${shots}</div></div></section>` : ''}
-        <section class="cs-next on-deep" data-dark><div class="wrap"><a href="project.html?p=${next.id}"><p class="kind">${esc(cs.next)}</p><h2>${esc(P(next).name)}</h2></a></div></section>`;
+        <section class="cs-next on-deep" data-dark><div class="wrap"><a href="project.html#${next.id}"><p class="kind">${esc(cs.next)}</p><h2>${esc(P(next).name)}</h2></a></div></section>`;
       $$('.gallery img', box).forEach(img => img.addEventListener('load', () => {
         if (img.naturalHeight / img.naturalWidth > 1) img.parentElement.classList.add('tall');
       }, { once: true }));
