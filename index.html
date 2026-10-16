@@ -1,132 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-page="home">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bayan Kallash — Full-Stack &amp; Laravel AI Engineer</title>
-  <meta name="description" content="Full-stack engineer specializing in Laravel ecosystems, modern web architecture, and AI workflows." />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bayan Kallash, AI systems engineer</title>
+<meta name="description" content="Bayan Kallash designs and builds automations, internal tools, AI assistants and integrations that take repetitive work off your team.">
+<meta name="theme-color" content="#061823">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800;900&family=Reem+Kufi:wght@500;700&family=Noto+Kufi+Arabic:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/bayan.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="index.html">Bayan <span>Kallash</span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a class="nav-cta" href="contact.html">Contact</a>
+<a class="skip" href="#main" data-t="skip">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="index.html" data-t-aria="nav.home" aria-label="Bayan, home"><span>bayan</span><i></i></a>
+    <nav aria-label="Main">
+      <a href="projects.html" data-t="nav.work">Work</a>
+      <a href="about.html" class="hide-s" data-t="nav.about">About</a>
+      <a href="contact.html" class="hide-m" data-t="nav.contact">Contact</a>
+      <button class="lang" id="lang" type="button" data-t="nav.lang" data-t-aria="nav.langAria" aria-label="اقرأ الموقع بالعربية">عربي</button>
+      <a class="pill" href="contact.html#brief" data-t="nav.start">Start a project</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main class="page-enter">
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <h1 class="brand-hero">
-          <span class="word"><i>Bayan</i></span>
-          <span class="word"><i>Kallash</i></span>
-        </h1>
-        <p class="hero-headline">Bulletproof backends. Reactive interfaces. Autonomous AI.</p>
-        <p class="hero-sub">I engineer web applications built on rock-solid Laravel foundations, reactive frontends (Vue/Inertia/Livewire), and intelligent AI workflows designed for maximum uptime and sub-second performance.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary magnetic" href="projects.html">See the work</a>
-          <a class="btn btn-ghost magnetic" href="contact.html">Hire me</a>
-        </div>
-      </div>
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Laravel 11+</span><span>Inertia.js</span><span>Livewire 3</span><span>Vue &amp; React</span><span>AI Workflows</span><span>PHP 8.3</span><span>PostgreSQL</span><span>Tailwind CSS</span><span>OpenAI API</span><span>Redis Horizon</span>
-          <span>Laravel 11+</span><span>Inertia.js</span><span>Livewire 3</span><span>Vue &amp; React</span><span>AI Workflows</span><span>PHP 8.3</span><span>PostgreSQL</span><span>Tailwind CSS</span><span>OpenAI API</span><span>Redis Horizon</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow reveal">Signal</p>
-      <h2 class="reveal">High-reliability architecture &amp; AI engineering</h2>
-      <p class="lead reveal d1">From PostgreSQL schema optimization and Laravel Horizon queue streams to AI agent integration — I transform mission-critical problems into clean, well-tested codebases built for production scale.</p>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <p class="eyebrow reveal">Work</p>
-      <h2 class="reveal">Featured systems &amp; projects</h2>
-      <p class="lead reveal d1">Drag or scroll sideways.</p>
-      <div class="rail-wrap reveal">
-        <div class="rail">
-          <article class="rail-item" data-case-study="form-generator" style="cursor:pointer">
-            <div class="num">01</div>
-            <h3>Form Generator <span class="project-type-badge">TALL &amp; GEMINI AI</span></h3>
-            <p>Dynamic form builder with Google Gemini AI chat builder, sentiment analysis &amp; anomaly alerts.</p>
-            <div class="tags"><span>Laravel</span><span>Livewire 3</span><span>Vite</span><span>Gemini AI</span><span>JS PWA</span></div>
-            <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
-              <button class="btn-case-study magnetic" type="button" data-case-study="form-generator" style="margin-top:0">Case Study &rarr;</button>
-              <a class="btn-case-study magnetic" href="https://formgenerator.me" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;" onclick="event.stopPropagation()">Live Demo ↗</a>
-            </div>
-          </article>
-          <article class="rail-item" data-case-study="receipt-snap" style="cursor:pointer">
-            <div class="num">02</div>
-            <h3>ReceiptSnap <span class="project-type-badge">MULTI-TENANT &amp; GEMINI AI</span></h3>
-            <p>Enterprise expense management &amp; receipt OCR platform on Laravel &amp; React 19 Inertia with policy controls.</p>
-            <div class="tags"><span>Laravel</span><span>React 19</span><span>Inertia.js</span><span>Gemini Vision</span><span>Postgres</span></div>
-            <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
-              <button class="btn-case-study magnetic" type="button" data-case-study="receipt-snap" style="margin-top:0">Case Study &rarr;</button>
-              <a class="btn-case-study magnetic" href="https://github.com/bkallash/receipt-snap" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;" onclick="event.stopPropagation()">GitHub ↗</a>
-            </div>
-          </article>
-          <article class="rail-item" data-case-study="the-margin" style="cursor:pointer">
-            <div class="num">03</div>
-            <h3>The Margin <span class="project-type-badge">LARAVEL 13 &amp; AI VECTOR SEARCH</span></h3>
-            <p>Modern essay publishing salon with AI vector embeddings, hybrid search &amp; moderation.</p>
-            <div class="tags"><span>Laravel 13</span><span>Livewire</span><span>Tailwind v4</span><span>Gemini Embeddings</span><span>Vector Search</span></div>
-            <button class="btn-case-study magnetic" type="button" data-case-study="the-margin" style="margin-top:0.75rem">Case Study &rarr;</button>
-          </article>
-          <article class="rail-item" data-case-study="ytui" style="cursor:pointer">
-            <div class="num">04</div>
-            <h3>YTUI <span class="project-type-badge">PYTHON TUI &amp; YT-DLP</span></h3>
-            <p>Keyboard-driven TUI client for yt-dlp with visual stream selection, multi-worker queue &amp; 17 themes.</p>
-            <div class="tags"><span>Python</span><span>Textual</span><span>Rich</span><span>yt-dlp</span><span>FFmpeg</span></div>
-            <div style="display:flex; gap:0.5rem; align-items:center; margin-top:0.75rem; flex-wrap:wrap;">
-              <button class="btn-case-study magnetic" type="button" data-case-study="ytui" style="margin-top:0">Case Study &rarr;</button>
-              <a class="btn-case-study magnetic" href="https://github.com/bkallash/YTUI" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;" onclick="event.stopPropagation()">GitHub ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div style="margin-top:1.75rem" class="reveal">
-        <a class="btn btn-ink magnetic" href="projects.html">All projects</a>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <p class="eyebrow reveal">Proof</p>
-      <h2 class="reveal">Endorsements &amp; Recommendations</h2>
-      <article class="project-item reveal" style="margin-top:1.5rem">
-        <blockquote style="font-size:clamp(1.15rem,2.2vw,1.45rem); font-weight:500; line-height:1.6; color:var(--text); margin-bottom:1.25rem;">
-          Verified references and client recommendations from past projects, full-stack builds, and engineering engagements are available upon request.
-        </blockquote>
-        <div style="display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; margin-top:1rem;">
-          <a class="btn btn-primary magnetic" href="contact.html">Request References</a>
-          <a class="btn btn-outline magnetic" href="testimonials.html">Learn more</a>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>© 2026 Bayan Kallash</p>
-    <div class="footer-links">
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
+<main id="main">
+  <section class="scene" id="hero" data-dark>
+    <div class="sticky">
+      <canvas id="noise" aria-hidden="true"></canvas>
+      <div class="layer l1 live" id="l1"><div class="wrap">
+        <h1 data-t="hero.h1">Your team is buried in work a system could do.</h1>
+        <p data-t="hero.sub">Emails, spreadsheets, copy and paste, the same questions every day. Scroll, and watch it sort itself out.</p>
+      </div></div>
+      <div class="layer l2" id="l2"><div class="wrap">
+        <h2 data-t="hero.mid">Every request read, routed and answered. Every number where it belongs.</h2>
+      </div></div>
+      <div class="layer l3" id="l3"><div class="wrap">
+        <h2 data-t="hero.end">I'm Bayan Kallash. I build the systems that do it for them.</h2>
+        <div class="ctas"><a class="btn solid" href="contact.html#brief" data-t="hero.start">Start a project</a><a class="btn ghost" href="#work" data-t="hero.work">See the work</a></div>
+      </div></div>
+      <div class="hint" id="hint" aria-hidden="true"></div>
     </div>
-  </footer>
-  <script src="js/main.js"></script>
+  </section>
+
+  <section class="reveal-sec">
+    <div class="wrap">
+      <p class="reveal" data-reveal data-reveal-hot="costHot" data-t="cost">Somewhere in your business, skilled people spend hours every week copying data between systems, chasing the same approvals and answering the same questions. That time has a salary attached. A well built system takes it back.</p>
+    </div>
+  </section>
+
+  <section class="scene" id="services">
+    <div class="sticky">
+      <div class="wrap svc">
+        <div>
+          <p class="svc-kicker" data-t="services.kicker">What I build</p>
+          <div class="svc-window" aria-hidden="true"><ul class="svc-words" id="svc-words"></ul></div>
+          <p class="svc-desc" id="svc-desc" aria-live="polite"></p>
+        </div>
+        <div>
+          <ul class="svc-list" id="svc-list"></ul>
+          <p class="svc-lead" data-t="services.lead">Five kinds of work, one goal: fewer hours on things a system can do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="proof">
+    <div class="sticky">
+      <div class="wrap proof">
+        <div>
+          <p class="kind" data-t="proof.kind">Client work in tax and compliance</p>
+          <h2 data-t="proof.name">Folio</h2>
+          <p class="body" data-t="proof.body">An AI pipeline that reads whole batches of invoices and pulls out what a tax exemption filing needs, plus an assistant that answers regulatory questions from the client's own library.</p>
+          <a class="more" href="project.html?p=folio" data-t="proof.read">Read the case study</a>
+        </div>
+        <div class="meters">
+          <div>
+            <div class="metric-num" id="m-time">5 h</div>
+            <p class="metric-cap" data-t="proof.timeCap">to prepare one batch of invoices</p>
+          </div>
+          <div>
+            <div class="people" id="people" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+            <div class="metric-num" id="m-ppl">10 people</div>
+            <p class="metric-cap" data-t="proof.peopleCap">needed to do the same work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" id="work">
+    <div class="sticky">
+      <div class="wrap work-head">
+        <h2 data-t="work.title">Recent work</h2>
+        <p data-t="work.lead">Products I designed and built end to end, each one starting from a task people were doing by hand.</p>
+      </div>
+      <div class="track" id="track"></div>
+    </div>
+  </section>
+
+  <section class="approach">
+    <div class="wrap">
+      <h2 data-t="approach.title">Two to three months. One clear finish line.</h2>
+      <p class="lead" data-t="approach.lead">I take on a few focused projects at a time. Scope is agreed up front, so you always know what you're getting and when.</p>
+      <div class="steps" data-rail>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <div class="step"><h3 data-t="approach.steps.0.t">Map the work</h3><span class="dur" data-t="approach.steps.0.dur">1 to 2 weeks</span><p data-t="approach.steps.0.d">I sit with the people doing the work, measure where the hours go, and we agree on scope, timeline and a fixed price.</p></div>
+        <div class="step"><h3 data-t="approach.steps.1.t">Build in phases</h3><span class="dur" data-t="approach.steps.1.dur">6 to 10 weeks</span><p data-t="approach.steps.1.d">You get working software every two weeks, tested on your real documents and data. Each phase ends with something you can use.</p></div>
+        <div class="step"><h3 data-t="approach.steps.2.t">Hand it over</h3><span class="dur" data-t="approach.steps.2.dur">Final week</span><p data-t="approach.steps.2.d">It runs in your environment, your team knows how to use it, and everything is documented. Support continues as agreed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="ar-huge" data-drift="20" lang="ar" aria-hidden="true">بيان</div>
+    <div class="wrap band-grid">
+      <h2 data-t="band.title">Bayan means clarity. It's my name and my job.</h2>
+      <div>
+        <p data-t="band.p1">In Arabic, bayan is a statement made plain. That's what I do with messy operations: find the work that repeats, and turn it into a system that runs on its own.</p>
+        <p data-t="band.p2">I'm a software engineer from Gaza, where the Mediterranean sits at the end of every street. I work mostly on the backend and on AI tooling, for clients in the Gulf, the US and Europe, in English and Arabic.</p>
+        <a class="more" href="about.html" data-t="band.more">More about me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="close on-deep" data-dark>
+    <div class="wrap">
+      <h2 data-t="cta.title">Tell me what your team repeats every week.</h2>
+      <p class="lead" data-t="cta.lead">I'll tell you plainly whether a system can do it, what it would take, and what it would save.</p>
+      <div class="ctas">
+        <a class="btn sun" href="contact.html#brief" data-t="cta.book">Send a project brief</a>
+        <span class="email"><code id="mail">bayankallash@gmail.com</code><button class="copy" type="button" data-copy="#mail" data-t="cta.copy">Copy email</button></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-dark>
+  <div class="wrap">
+    <span data-t="footer.name">Bayan Kallash, AI systems engineer</span>
+    <nav aria-label="Footer"><a href="projects.html" data-t="nav.work">Work</a><a href="about.html" data-t="nav.about">About</a><a href="contact.html" data-t="nav.contact">Contact</a><a href="https://github.com/bkallash">GitHub</a><a href="https://linkedin.com/in/bayankallash">LinkedIn</a></nav>
+    <span data-t="footer.year">© 2026</span>
+  </div>
+</footer>
+<div class="dot" id="dot" aria-hidden="true"></div>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

@@ -1,77 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-page="projects">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Bayan Kallash</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Work by Bayan Kallash</title>
+<meta name="description" content="Bayan Kallash designs and builds automations, internal tools, AI assistants and integrations that take repetitive work off your team.">
+<meta name="theme-color" content="#EEF3EF">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800;900&family=Reem+Kufi:wght@500;700&family=Noto+Kufi+Arabic:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/bayan.css">
 </head>
 <body>
-  <header class="nav solid">
-    <a class="logo" href="index.html">Bayan <span>Kallash</span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a class="active" href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a class="nav-cta" href="contact.html">Contact</a>
+<a class="skip" href="#main" data-t="skip">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="index.html" data-t-aria="nav.home" aria-label="Bayan, home"><span>bayan</span><i></i></a>
+    <nav aria-label="Main">
+      <a href="projects.html" aria-current="page" data-t="nav.work">Work</a>
+      <a href="about.html" class="hide-s" data-t="nav.about">About</a>
+      <a href="contact.html" class="hide-m" data-t="nav.contact">Contact</a>
+      <button class="lang" id="lang" type="button" data-t="nav.lang" data-t-aria="nav.langAria" aria-label="اقرأ الموقع بالعربية">عربي</button>
+      <a class="pill" href="contact.html#brief" data-t="nav.start">Start a project</a>
     </nav>
-  </header>
-  <header class="page-hero page-enter">
-    <p class="eyebrow reveal">Work</p>
-    <h1 class="reveal">Featured projects</h1>
-    <p class="reveal d1">Full-stack web applications, high-throughput Laravel backends, and custom AI agent pipelines.</p>
-  </header>
-  <section class="section" style="padding-top:0">
-    <div class="project-list">
-      <article class="project-item reveal">
-        <p class="eyebrow">01 / 2026</p>
-        <h2 style="font-size:clamp(1.6rem,4vw,2.4rem)">Form Generator <span class="project-type-badge">TALL &amp; GEMINI AI</span></h2>
-        <p class="lead">Laravel 12 &amp; Livewire 3 dynamic form builder featuring Google Gemini AI conversational builder, asynchronous sentiment analysis, and automated traffic anomaly detection.</p>
-        <div class="tags"><span>Laravel</span><span>Livewire 3</span><span>Alpine.js</span><span>Tailwind</span><span>MySQL</span><span>Gemini AI</span><span>Vite</span><span>JS PWA</span></div>
-        <div style="display:flex; gap:0.6rem; align-items:center; margin-top:1rem; flex-wrap:wrap;">
-          <button class="btn-case-study magnetic" type="button" data-case-study="form-generator" style="margin-top:0;">View Case Study &rarr;</button>
-          <a class="btn-case-study magnetic" href="https://formgenerator.me" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;">Live Demo ↗</a>
-        </div>
-      </article>
-      <article class="project-item reveal d1">
-        <p class="eyebrow">02 / 2026</p>
-        <h2 style="font-size:clamp(1.6rem,4vw,2.4rem)">ReceiptSnap <span class="project-type-badge">ENTERPRISE MULTI-TENANT &amp; GEMINI AI</span></h2>
-        <p class="lead">Enterprise-grade, API-first multi-tenant expense management and AI-powered receipt capture platform built on Laravel 10+ and React 19 (Inertia.js) with Google Gemini Vision extraction, automated policy enforcement, and audit compliance.</p>
-        <div class="tags"><span>Laravel</span><span>React 19</span><span>Inertia.js</span><span>TypeScript</span><span>Tailwind CSS v4</span><span>Gemini Vision</span><span>laravel/ai</span><span>PostgreSQL</span><span>Redis</span></div>
-        <div style="display:flex; gap:0.6rem; align-items:center; margin-top:1rem; flex-wrap:wrap;">
-          <button class="btn-case-study magnetic" type="button" data-case-study="receipt-snap" style="margin-top:0;">View Case Study &rarr;</button>
-          <a class="btn-case-study magnetic" href="https://github.com/bkallash/receipt-snap" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;">GitHub Repo ↗</a>
-        </div>
-      </article>
-      <article class="project-item reveal d2">
-        <p class="eyebrow">03 / 2026</p>
-        <h2 style="font-size:clamp(1.6rem,4vw,2.4rem)">The Margin <span class="project-type-badge">LARAVEL 13 &amp; AI VECTOR SEARCH</span></h2>
-        <p class="lead">Modern blogging &amp; open publishing salon built on Laravel 13 &amp; Tailwind CSS v4 featuring AI vector search, social follow graph, real-time Echo notifications, and moderation appeal workflows.</p>
-        <div class="tags"><span>Laravel 13</span><span>Livewire 3</span><span>Tailwind CSS v4</span><span>Gemini Embeddings</span><span>laravel/ai</span><span>Vector Search</span><span>Vite 8</span><span>Pusher</span><span>MySQL</span></div>
-        <button class="btn-case-study magnetic" type="button" data-case-study="the-margin">View Case Study &rarr;</button>
-      </article>
-      <article class="project-item reveal d3">
-        <p class="eyebrow">04 / 2026</p>
-        <h2 style="font-size:clamp(1.6rem,4vw,2.4rem)">YTUI <span class="project-type-badge">PYTHON TUI &amp; YT-DLP</span></h2>
-        <p class="lead">Sleek, keyboard-driven Terminal User Interface (TUI) client and download manager for yt-dlp — visual stream selection, multi-worker queue, 17 themes, and native RTL support.</p>
-        <div class="tags"><span>Python</span><span>Textual</span><span>Rich</span><span>yt-dlp</span><span>FFmpeg</span></div>
-        <div style="display:flex; gap:0.6rem; align-items:center; margin-top:1rem; flex-wrap:wrap;">
-          <button class="btn-case-study magnetic" type="button" data-case-study="ytui" style="margin-top:0;">View Case Study &rarr;</button>
-          <a class="btn-case-study magnetic" href="https://github.com/bkallash/YTUI" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;">GitHub Repo ↗</a>
-          <a class="btn-case-study magnetic" href="https://pypi.org/project/ytui-media/" target="_blank" rel="noopener" style="margin-top:0; text-decoration:none;">PyPI ↗</a>
-        </div>
-      </article>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head wrap">
+    <h1 data-t="projectsPage.h1">Systems that take work off people.</h1>
+    <p class="lead" data-t="projectsPage.lead">Client systems and products I designed and built, from AI document processing to multi-agent apps. Each one starts with a real, repetitive problem.</p>
+  </section>
+  <section class="wrap">
+    <div class="filters" id="filters" role="group" data-t-aria="projectsPage.filterAria" aria-label="Filter projects">
+      <button type="button" data-f="all" aria-pressed="true" data-t="kinds.all">All</button>
+      <button type="button" data-f="client" aria-pressed="false" data-t="kinds.client">Client work</button>
+      <button type="button" data-f="product" aria-pressed="false" data-t="kinds.product">Products</button>
+      <button type="button" data-f="oss" aria-pressed="false" data-t="kinds.oss">Open source</button>
+      <p class="count" id="pcount" aria-live="polite"></p>
+    </div>
+    <ol class="plist" id="plist"></ol>
+    <noscript><p class="lead">Turn on JavaScript to see the projects, or visit <a href="https://github.com/bkallash">github.com/bkallash</a>.</p></noscript>
+  </section>
+
+  <section class="close on-deep" data-dark>
+    <div class="wrap">
+      <h2 data-t="cta.title">Tell me what your team repeats every week.</h2>
+      <p class="lead" data-t="cta.lead">I'll tell you plainly whether a system can do it, what it would take, and what it would save.</p>
+      <div class="ctas">
+        <a class="btn sun" href="contact.html#brief" data-t="cta.book">Send a project brief</a>
+        <span class="email"><code id="mail">bayankallash@gmail.com</code><button class="copy" type="button" data-copy="#mail" data-t="cta.copy">Copy email</button></span>
+      </div>
     </div>
   </section>
-  <footer class="footer">
-    <p>© 2026 Bayan Kallash</p>
-    <div class="footer-links"><a href="contact.html">Contact</a></div>
-  </footer>
-  <script src="js/main.js"></script>
+</main>
+
+<footer class="foot" data-dark>
+  <div class="wrap">
+    <span data-t="footer.name">Bayan Kallash, AI systems engineer</span>
+    <nav aria-label="Footer"><a href="projects.html" data-t="nav.work">Work</a><a href="about.html" data-t="nav.about">About</a><a href="contact.html" data-t="nav.contact">Contact</a><a href="https://github.com/bkallash">GitHub</a><a href="https://linkedin.com/in/bayankallash">LinkedIn</a></nav>
+    <span data-t="footer.year">© 2026</span>
+  </div>
+</footer>
+<div class="dot" id="dot" aria-hidden="true"></div>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

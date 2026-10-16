@@ -1,65 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-page="about">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Bayan Kallash</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About Bayan Kallash</title>
+<meta name="description" content="Bayan Kallash designs and builds automations, internal tools, AI assistants and integrations that take repetitive work off your team.">
+<meta name="theme-color" content="#EEF3EF">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800;900&family=Reem+Kufi:wght@500;700&family=Noto+Kufi+Arabic:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/bayan.css">
 </head>
 <body>
-  <header class="nav solid">
-    <a class="logo" href="index.html">Bayan <span>Kallash</span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a class="active" href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="skills.html">Skills</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a class="nav-cta" href="contact.html">Contact</a>
+<a class="skip" href="#main" data-t="skip">Skip to content</a>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="mark" href="index.html" data-t-aria="nav.home" aria-label="Bayan, home"><span>bayan</span><i></i></a>
+    <nav aria-label="Main">
+      <a href="projects.html" data-t="nav.work">Work</a>
+      <a href="about.html" class="hide-s" aria-current="page" data-t="nav.about">About</a>
+      <a href="contact.html" class="hide-m" data-t="nav.contact">Contact</a>
+      <button class="lang" id="lang" type="button" data-t="nav.lang" data-t-aria="nav.langAria" aria-label="اقرأ الموقع بالعربية">عربي</button>
+      <a class="pill" href="contact.html#brief" data-t="nav.start">Start a project</a>
     </nav>
-  </header>
-  <main class="section about-split page-enter">
-    <div class="about-block reveal"><strong>Bayan Kallash</strong></div>
-    <div class="about-copy reveal d1">
-      <p class="eyebrow">About</p>
-      <h1 class="scramble-target">Disciplined Engineering. Clean Architecture.</h1>
-      <p>Full-stack developer with disciplined command of software engineering fundamentals — system design, data structures, algorithms, and clean architecture. I engineer Laravel and PHP solutions with precision, from well-modeled data layers and secure APIs to polished, intuitive interfaces.</p>
-      <p>Holding work to a high standard of clarity, maintainability, and technical rigor. Open to remote full-stack and backend roles worldwide.</p>
-      <ul class="timeline">
-        <li class="reveal">
-          <span class="y">2026–Pres.</span>
-          <div>
-            <strong>SPOCS Agentic AI Course</strong>
-            <p class="timeline-sub">Specialized Track (Ongoing) · <a href="https://github.com/spocs-coders/ai-agents" target="_blank" rel="noopener">spocs-coders/ai-agents</a></p>
-            <p>Specialized program covering LLM-based agent architecture, prompt engineering &amp; reflection, tool augmentation (MCP, search, Text-to-SQL), multi-agent collaboration, memory management, and agent evaluation frameworks.</p>
-          </div>
-        </li>
-        <li class="reveal d1">
-          <span class="y">2026</span>
-          <div>
-            <strong>Advanced Laravel Bootcamp — UCASTI</strong>
-            <p class="timeline-sub">Certification · UCASTI</p>
-            <p>Advanced PHP/Laravel: MVC, Eloquent ORM, middleware, authentication, and API development — pursued alongside full-time studies.</p>
-          </div>
-        </li>
-        <li class="reveal d2">
-          <span class="y">2022–Pres.</span>
-          <div>
-            <strong>B.Sc. Software Engineering</strong>
-            <p class="timeline-sub">Education · Islamic University of Gaza</p>
-            <p>Focus on full-stack development and agile practices. Coursework: software architecture, data structures, algorithms, databases, OOP, and web engineering.</p>
-          </div>
-        </li>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head wrap">
+    <h1 data-t="aboutPage.h1">Bayan means clarity. It's my name and my job.</h1>
+  </section>
+
+  <section class="band" style="padding-block:clamp(40px,6vw,80px)">
+    <div class="ar-huge" data-drift="22" lang="ar" aria-hidden="true">بيان</div>
+    <div class="wrap about-copy">
+      <p data-t="aboutPage.p1">In Arabic, bayan is a statement made plain. I bring that to software: I find the work in a business that repeats, and replace it with a system that is clear to use and runs on its own.</p>
+      <div>
+        <p class="muted" data-t="aboutPage.p2">I'm a software engineer from Gaza. I work mostly on the backend and on AI tooling: Python and LangGraph for agents and pipelines, MCP and integrations to connect them to real tools, and Laravel when a product needs a full web app around it.</p>
+        <p class="muted" style="margin-top:16px" data-t="aboutPage.p3">I work with business owners, startups and small teams in the Gulf, the US and Europe. Most projects run two to three months with a clear scope from the first week.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 data-t="aboutPage.principlesTitle">What clients can expect</h2>
+      <ul class="principles">
+        <li><h3 data-t="aboutPage.principles.0.t">Plain communication</h3><p data-t="aboutPage.principles.0.d">You always know what I am building, why, and when it lands. Weekly updates in your language, no jargon.</p></li>
+        <li><h3 data-t="aboutPage.principles.1.t">Attention to detail</h3><p data-t="aboutPage.principles.1.d">Edge cases, wrong inputs and the boring parts get the same care as the demo. That is where systems usually break.</p></li>
+        <li><h3 data-t="aboutPage.principles.2.t">Fast, with care</h3><p data-t="aboutPage.principles.2.d">I move quickly because the scope is clear, not because corners are cut.</p></li>
       </ul>
     </div>
-  </main>
-  <footer class="footer">
-    <p>© 2026 Bayan Kallash</p>
-    <div class="footer-links"><a href="contact.html">Contact</a></div>
-  </footer>
-  <script src="js/main.js"></script>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-t="aboutPage.pathTitle">Path</h2>
+      <div class="path" data-rail>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <ol class="path-list">
+        <li><span class="y" data-t="aboutPage.path.0.y">2022 to now</span><div><h3 data-t="aboutPage.path.0.t">B.Sc. Software Engineering</h3><p class="s" data-t="aboutPage.path.0.s">Islamic University of Gaza</p><p class="d" data-t="aboutPage.path.0.d">Software architecture, data structures, algorithms, databases and web engineering.</p></div></li>
+        <li><span class="y" data-t="aboutPage.path.1.y">2026</span><div><h3 data-t="aboutPage.path.1.t">Advanced Laravel Bootcamp</h3><p class="s" data-t="aboutPage.path.1.s">UCASTI</p><p class="d" data-t="aboutPage.path.1.d">Advanced PHP and Laravel: Eloquent, middleware, authentication and API design, alongside full-time study.</p></div></li>
+        <li><span class="y" data-t="aboutPage.path.2.y">2026 to now</span><div><h3 data-t="aboutPage.path.2.t">Agentic AI program</h3><p class="s" data-t="aboutPage.path.2.s">SPOCS</p><p class="d" data-t="aboutPage.path.2.d">Agent architecture, tool use with MCP, search and Text-to-SQL, multi-agent collaboration, memory and evaluation.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-t="aboutPage.toolboxTitle">Toolbox</h2>
+      <dl class="toolbox">
+        <div><dt data-t="aboutPage.toolbox.0.t">AI and agents</dt><dd data-t="aboutPage.toolbox.0.i">LangGraph, MCP, RAG, embeddings and vector search, structured output, OpenAI, Anthropic and Gemini APIs</dd></div>
+        <div><dt data-t="aboutPage.toolbox.1.t">Backend</dt><dd data-t="aboutPage.toolbox.1.i">Python, PHP and Laravel, PostgreSQL, MySQL, Redis, queues and background workers, REST APIs</dd></div>
+        <div><dt data-t="aboutPage.toolbox.2.t">Product and web</dt><dd data-t="aboutPage.toolbox.2.i">React, Inertia, Livewire, Tailwind CSS, Textual for terminal apps</dd></div>
+        <div><dt data-t="aboutPage.toolbox.3.t">Delivery</dt><dd data-t="aboutPage.toolbox.3.i">Docker, GitHub Actions, automated tests with Pest and pytest, monitoring</dd></div>
+        <div><dt data-t="aboutPage.langsTitle">Languages</dt><dd data-t="aboutPage.langs">Arabic, native. English, professional.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="close on-deep" data-dark>
+    <div class="wrap">
+      <h2 data-t="cta.title">Tell me what your team repeats every week.</h2>
+      <p class="lead" data-t="cta.lead">I'll tell you plainly whether a system can do it, what it would take, and what it would save.</p>
+      <div class="ctas">
+        <a class="btn sun" href="contact.html#brief" data-t="cta.book">Send a project brief</a>
+        <span class="email"><code id="mail">bayankallash@gmail.com</code><button class="copy" type="button" data-copy="#mail" data-t="cta.copy">Copy email</button></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-dark>
+  <div class="wrap">
+    <span data-t="footer.name">Bayan Kallash, AI systems engineer</span>
+    <nav aria-label="Footer"><a href="projects.html" data-t="nav.work">Work</a><a href="about.html" data-t="nav.about">About</a><a href="contact.html" data-t="nav.contact">Contact</a><a href="https://github.com/bkallash">GitHub</a><a href="https://linkedin.com/in/bayankallash">LinkedIn</a></nav>
+    <span data-t="footer.year">© 2026</span>
+  </div>
+</footer>
+<div class="dot" id="dot" aria-hidden="true"></div>
+<script src="js/content.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
