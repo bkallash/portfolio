@@ -1,0 +1,14 @@
+{
+  "name": "bayan-kallash-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Static portfolio site for Bayan Kallash, deployed to GitHub Pages.",
+  "scripts": {
+    "check": "html-validate \"*.html\"",
+    "validate": "node .github/scripts/check-site.mjs",
+    "build": "npm run check && node .github/scripts/build-site.mjs"
+  },
+  "devDependencies": {
+    "html-validate": "^9.7.1"
+  }
+}
