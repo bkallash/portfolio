@@ -10,7 +10,7 @@ import { spawnSync } from 'node:child_process'
 const ROOT = process.cwd()
 const OUT = path.join(ROOT, 'site')
 const FILES = ['.nojekyll', 'apple-touch-icon.png', 'favicon.svg', 'og.png']
-const DIRECTORIES = ['fonts', 'img', 'vendor']
+const DIRECTORIES = ['cv', 'fonts', 'img', 'vendor']
 
 const html = (await readdir(ROOT)).filter((name) => name.endsWith('.html'))
 
