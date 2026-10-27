@@ -1,7 +1,7 @@
 {
   "extends": ["html-validate:recommended"],
   "rules": {
-    "no-inline-style": ["error", { "allowedProperties": ["--i"] }],
+    "no-inline-style": ["error", { "allowedProperties": ["--i", "--j"] }],
     "require-sri": "off"
   }
 }
