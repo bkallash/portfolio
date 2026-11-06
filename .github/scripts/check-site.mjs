@@ -93,7 +93,7 @@ async function checkFile(file) {
       fail(name, `reference "${target.outside}" points outside the repository`)
       continue
     }
-    const candidates = target === '' ? ['index.html'] : [target, path.join(target, 'index.html')]
+    const candidates = target === '' ? ['index.html'] : [target, `${target}.html`, path.join(target, 'index.html')]
     if (!candidates.some((candidate) => existsSync(path.join(ROOT, candidate)))) {
       fail(name, `missing referenced file "${ref}"`)
     }
