@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>/\.html$/.test(location.pathname)&&history.replaceState(null,"",location.pathname.replace(/(index)?\.html$/,"")+location.search+location.hash)</script>
 <script>(()=>{let l=new URLSearchParams(location.search).get("lang");try{l?localStorage.setItem("lang",l):l=localStorage.getItem("lang")}catch{}if(l==="ar"){const d=document.documentElement;d.lang="ar";d.dir="rtl";document.head.insertAdjacentHTML("beforeend",'<link rel="preload" href="fonts/cairo-arabic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>')}})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Case studies · Bayan Kallash</title>
